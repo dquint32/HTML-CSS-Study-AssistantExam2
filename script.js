@@ -1,4 +1,4 @@
-fetch('studyGuide.json')
+fetch('data/studyGuide.json')
   .then(response => response.json())
   .then(data => {
     const container = document.getElementById('card-container');
@@ -31,3 +31,4 @@ fetch('studyGuide.json')
     document.getElementById('card-container').innerHTML = `<p>Error loading study guide.</p>`;
     console.error('Error:', error);
   });
+
