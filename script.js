@@ -1,82 +1,128 @@
-fetch('studyGuide.json')
-  .then(response => {
-    // 1. CHECK FOR NETWORK/HTTP ERRORS (e.g., 404 Not Found)
-    if (!response.ok) {
-      // If a 404 or other error occurs, throw an error with the status
-      throw new Error(`HTTP error! Status: ${response.status} (${response.statusText}). Check file path and case.`);
-    }
-    // 2. SAFELY PARSE JSON
-    return response.json();
-  })
-  .then(data => {
-    const container = document.getElementById('card-container');
-    
-    // Ensure data.studyGuide exists and is an array
-    if (!data.studyGuide || !Array.isArray(data.studyGuide)) {
-        throw new Error("JSON structure is missing the 'studyGuide' array.");
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('studyGuide.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            const container = document.getElementById('card-container');
+            data.studyGuide.forEach(concept => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.id = concept.conceptId;
 
-    // 3. RENDER CARDS USING NESTED PROPERTIES
-    data.studyGuide.forEach(concept => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      
-      // DESTUCTURING: This is what fixes the problem by accessing the nested data
-      const questionData = concept.multipleChoiceQuestion;
-      const codeData = concept.codeExample;
-      const visualData = concept.visualConcept;
-      const explanationData = concept.answerExplanation;
+                // Build the multiple-choice options HTML
+                const optionsHTML = concept.multipleChoiceQuestion.options.map((opt, index) => `
+                    <label class="option-label">
+                        <input type="radio" name="${concept.conceptId}_quiz" data-correct="${opt.isCorrect}" value="${index}" />
+                        <span class="option-text">${opt.optionText}</span>
+                    </label>
+                `).join('');
 
-      // Map options to radio button labels
-      const optionsHtml = questionData.options.map(opt => `
-        <label class="${opt.isCorrect ? 'correct-option' : ''}">
-          <input type="radio" name="${concept.conceptId}" disabled />
-          ${opt.optionText}
-          ${opt.isCorrect ? ' <span class="answer-indicator">✅</span>' : ''}
-        </label>
-      `).join('');
+                // The complete card structure using backticks (`) for the template literal
+                card.innerHTML = `
+                    <h2 class="concept-title">${concept.conceptTitle}</h2>
+                    <p class="category-tag"><strong>Category:</strong> ${concept.category}</p>
 
-      card.innerHTML = `
-        <h2>${concept.conceptTitle}</h2>
-        <p><strong>Category:</strong> ${concept.category}</p>
-        <p><strong>Question:</strong> ${questionData.questionText}</p>
+                    <div class="quiz-section">
+                        <p class="question-text">${concept.multipleChoiceQuestion.questionText}</p>
+                        <div class="options">
+                            ${optionsHTML}
+                        </div>
+                        <button class="check-answer-btn">Check Answer</button>
+                        <div class="feedback-area"></div>
+                    </div>
 
-        <div class="options">
-          ${optionsHtml}
-        </div>
-        
-        <div class="code-section">
-            <h4>Code Example: ${codeData.description}</h4>
-            
-            <div class="code-block html-code">
-                <strong>HTML:</strong>
-                <pre><code>${codeData.html.trim()}</code></pre>
-            </div>
-            
-            ${codeData.css ? `
-            <div class="code-block css-code">
-                <strong>CSS:</strong>
-                <pre><code>${codeData.css.trim()}</code></pre>
-            </div>
-            ` : ''}
-        </div>
+                    <div class="hint-section">
+                        <button class="toggle-hint-btn">Show Hint / Visual Concept</button>
+                        <div class="hint-content hidden">
+                            <div class="code-block">
+                                <h3>Code Example</h3>
+                                <div class="code-pair">
+                                    <h4>HTML</h4>
+                                    <pre><code>${concept.codeExample.html}</code></pre>
+                                </div>
+                                <div class="code-pair">
+                                    <h4>CSS</h4>
+                                    <pre><code>${concept.codeExample.css}</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div class="visual-concept">
+                                <h3>Visual Concept: ${concept.visualConcept.title}</h3>
+                                <p class="analogy"><strong>Analogy/Snippet:</strong> ${concept.visualConcept.snippetOrAnalogy}</p>
+                                <p class="importance"><strong>Importance:</strong> ${concept.visualConcept.importance}</p>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="visual-concept">
-          <strong>${visualData.title}</strong>
-          <p class="snippet">${visualData.snippetOrAnalogy}</p>
-          <p class="importance"><strong>Importance:</strong> ${visualData.importance}</p>
-        </div>
+                    <div class="explanation-section hidden">
+                        <h3>${concept.answerExplanation.title}</h3>
+                        <p>${concept.answerExplanation.text}</p>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
 
-        <div class="explanation">
-            <h4>${explanationData.title}</h4>
-            <p>${explanationData.text}</p>
-        </div>
-      `;
-      container.appendChild(card);
-    });
-  })
-  .catch(error => {
-    // 4. DISPLAY DETAILED ERROR MESSAGE
-    document.getElementById('card-container').innerHTML = `<p>⚠️ Error loading study guide: ${error.message}. Please check your browser's console (F12) for more details.</p>`;
-    console.error('Fetch and Rendering Error:', error);
-  });
+            // --- Add Event Listeners for Interactivity ---
+            document.querySelectorAll('.check-answer-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const card = event.target.closest('.card');
+                    const selectedOption = card.querySelector('input[type="radio"]:checked');
+                    const feedbackArea = card.querySelector('.feedback-area');
+                    const explanationSection = card.querySelector('.explanation-section');
+                    const options = card.querySelectorAll('.option-label');
+
+                    // Reset state
+                    feedbackArea.textContent = '';
+                    feedbackArea.classList.remove('correct', 'incorrect');
+                    explanationSection.classList.add('hidden');
+                    options.forEach(opt => opt.classList.remove('correct-choice', 'incorrect-choice'));
+
+                    if (!selectedOption) {
+                        feedbackArea.textContent = 'Please select an answer first.';
+                        return;
+                    }
+
+                    if (selectedOption.getAttribute('data-correct') === 'true') {
+                        feedbackArea.textContent = '✅ Correct! Well done!';
+                        feedbackArea.classList.add('correct');
+                        selectedOption.closest('.option-label').classList.add('correct-choice');
+                        explanationSection.classList.remove('hidden'); // Show explanation on correct
+                    } else {
+                        feedbackArea.textContent = '❌ Incorrect. Review the hint or explanation.';
+                        feedbackArea.classList.add('incorrect');
+                        selectedOption.closest('.option-label').classList.add('incorrect-choice');
+                        
+                        // Highlight the correct answer
+                        card.querySelector('input[data-correct="true"]').closest('.option-label').classList.add('correct-choice');
+
+                        explanationSection.classList.remove('hidden'); // Show explanation on incorrect
+                    }
+                });
+            });
+
+            document.querySelectorAll('.toggle-hint-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const hintContent = event.target.nextElementSibling;
+                    hintContent.classList.toggle('hidden');
+                    if (hintContent.classList.contains('hidden')) {
+                        event.target.textContent = 'Show Hint / Visual Concept';
+                    } else {
+                        event.target.textContent = 'Hide Hint / Visual Concept';
+                    }
+                });
+            });
+
+        })
+        .catch(error => {
+            document.getElementById('card-container').innerHTML = `
+                <p style="color: red; font-weight: bold;">
+                    ⚠️ Error loading study guide: Check console for details.
+                </p>`;
+            console.error('Error loading study guide:', error);
+        });
+});
