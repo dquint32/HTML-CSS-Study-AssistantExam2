@@ -1,7 +1,8 @@
 fetch('studyGuide.json')
   .then(response => {
-    // 1. CHECK FOR NETWORK/HTTP ERRORS (e.g., 404 Not Found, 500 Server Error)
+    // 1. CHECK FOR NETWORK/HTTP ERRORS (e.g., 404 Not Found)
     if (!response.ok) {
+      // If a 404 or other error occurs, throw an error with the status
       throw new Error(`HTTP error! Status: ${response.status} (${response.statusText}). Check file path and case.`);
     }
     // 2. SAFELY PARSE JSON
@@ -15,7 +16,7 @@ fetch('studyGuide.json')
         throw new Error("JSON structure is missing the 'studyGuide' array.");
     }
 
-    // 3. RENDER CARDS
+    // 3. RENDER CARDS USING NESTED PROPERTIES
     data.studyGuide.forEach(concept => {
       const card = document.createElement('div');
       card.className = 'card';
