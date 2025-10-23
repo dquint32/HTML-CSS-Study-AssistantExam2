@@ -1,612 +1,1504 @@
 {
   "studyGuide": [
     {
-      "conceptId": "html-table-element",
-      "conceptTitle": "The <table> Element",
-      "category": "HTML Table Structure",
-      "multipleChoiceQuestion": {
-        "questionText": "What is the primary semantic purpose of the `<table>` element in HTML5?",
-        "options": [
-          { "optionText": "To create a grid-based layout for a webpage.", "isCorrect": false },
-          { "optionText": "To display tabular data in a structured, accessible way.", "isCorrect": true },
-          { "optionText": "To contain and align images and text.", "isCorrect": false },
-          { "optionText": "To act as a general-purpose container like a `<div>`.", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "A basic HTML table structure wrapping the main table components.",
-        "html": "<table>\n  \n</table>",
-        "css": "table {\n  width: 100%;\n  border: 1px solid #ccc;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `<table>` element is semantically designed for presenting data in a two-dimensional grid. Using it for layout is an outdated practice that harms accessibility for screen reader users."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: A `<table>` is like a spreadsheet canvas, defining the boundary for all your rows and columns.",
-        "importance": "Using `<table>` correctly ensures that data is machine-readable and accessible to users with assistive technologies."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T001",
+      "conceptTitle": "Which HTML element defines a table?",
+      "category": "HTML Tables",
+      "question": "Which HTML element defines a table?",
+      "options": [
+        { "label": "&lt;tbody&gt;", "isCorrect": false },
+        { "label": "&lt;table&gt;", "isCorrect": true },
+        { "label": "&lt;div&gt;", "isCorrect": false },
+        { "label": "&lt;tr&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;table&gt;\n  &lt;!-- content --&gt;\n&lt;/table&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;table&gt; element is the container for all other table-related elements and defines the start and end of an HTML table."
     },
     {
-      "conceptId": "html-tr-element",
-      "conceptTitle": "The <tr> Element",
-      "category": "HTML Table Structure",
-      "multipleChoiceQuestion": {
-        "questionText": "What does the `<tr>` element define within an HTML table?",
-        "options": [
-          { "optionText": "A single data cell.", "isCorrect": false },
-          { "optionText": "A column of the table.", "isCorrect": false },
-          { "optionText": "A header cell.", "isCorrect": false },
-          { "optionText": "A row of cells.", "isCorrect": true }
-        ]
-      },
-      "codeExample": {
-        "description": "Demonstrates a table row `<tr>` containing table cells.",
-        "html": "<table>\n  <tr>\n    <td>Cell 1</td>\n    <td>Cell 2</td>\n  </tr>\n</table>",
-        "css": "tr {\n  border-bottom: 1px solid #eee;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `<tr>` (table row) element acts as a container for a horizontal set of cells, which can be either `<th>` (header) or `<td>` (data) cells. Every row in a table must be enclosed in `<tr>` tags."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Code: `<tr>...</tr>`",
-        "importance": "The `<tr>` element is fundamental for structuring content horizontally, creating the familiar row-based structure of a table."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T002",
+      "conceptTitle": "Correct element for table rows",
+      "category": "HTML Tables",
+      "question": "What is the correct element for table rows?",
+      "options": [
+        { "label": "&lt;td&gt;", "isCorrect": false },
+        { "label": "&lt;tr&gt;", "isCorrect": true },
+        { "label": "&lt;th&gt;", "isCorrect": false },
+        { "label": "&lt;tbody&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;tr&gt;\n  &lt;td&gt;Data&lt;/td&gt;\n&lt;/tr&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;tr&gt; element defines a row in an HTML table, and it contains &lt;td&gt; (data) or &lt;th&gt; (header) cells."
     },
     {
-      "conceptId": "html-td-element",
-      "conceptTitle": "The <td> Element",
-      "category": "HTML Table Structure",
-      "multipleChoiceQuestion": {
-        "questionText": "Which element is used to define a standard data cell in a table?",
-        "options": [
-          { "optionText": "<th>", "isCorrect": false },
-          { "optionText": "<td>", "isCorrect": true },
-          { "optionText": "<cell>", "isCorrect": false },
-          { "optionText": "<tr>", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "Shows a table row with two standard data cells.",
-        "html": "<table>\n  <tr>\n    <td>First Name</td>\n    <td>John</td>\n  </tr>\n</table>",
-        "css": "td {\n  padding: 8px;\n  text-align: left;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `<td>` (table data) element represents a single data cell within a table row (`<tr>`). It holds the actual content of the table."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: A `<td>` is a single cell in a spreadsheet where you enter data.",
-        "importance": "Properly using `<td>` for data (and `<th>` for headers) is crucial for screen readers to announce table content logically."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T003",
+      "conceptTitle": "Elements for table header cells",
+      "category": "HTML Tables",
+      "question": "Which elements define header cells in a table?",
+      "options": [
+        { "label": "&lt;thead&gt;", "isCorrect": false },
+        { "label": "&lt;th&gt;", "isCorrect": true },
+        { "label": "&lt;caption&gt;", "isCorrect": false },
+        { "label": "&lt;tbody&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;th&gt;Product Name&lt;/th&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;th&gt; element defines a header cell, which typically displays text in bold and centered, and provides semantic meaning for accessibility."
     },
     {
-      "conceptId": "html-th-element",
-      "conceptTitle": "The <th> Element",
-      "category": "HTML Table Structure",
-      "multipleChoiceQuestion": {
-        "questionText": "What is the key difference between a `<th>` and a `<td>` element?",
-        "options": [
-          { "optionText": "`<th>` can contain images, while `<td>` cannot.", "isCorrect": false },
-          { "optionText": "`<th>` is for the first row only.", "isCorrect": false },
-          { "optionText": "`<th>` defines a header cell, which is semantically important and bold/centered by default.", "isCorrect": true },
-          { "optionText": "There is no functional difference; they are interchangeable.", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "A table row using `<th>` to define header cells for columns.",
-        "html": "<table>\n  <tr>\n    <th>Name</th>\n    <th>Email</th>\n  </tr>\n  <tr>\n    <td>Jane Doe</td>\n    <td>jane@example.com</td>\n  </tr>\n</table>",
-        "css": "th {\n  background-color: #f2f2f2;\n  padding: 8px;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "`<th>` stands for 'table header'. It semantically identifies a cell as a header for a column or row. Browsers typically render `<th>` content as bold and centered to distinguish it visually."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: `<th>` is the title on the top of a column in a ledger book.",
-        "importance": "Using `<th>` allows assistive technologies to associate data cells with their corresponding headers, which is critical for accessibility."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T004",
+      "conceptTitle": "Tags for grouping rows logically",
+      "category": "HTML Tables",
+      "question": "What tags are used for grouping rows logically in a table?",
+      "options": [
+        { "label": "&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;", "isCorrect": true },
+        { "label": "&lt;rowgroup&gt;, &lt;colgroup&gt;", "isCorrect": false },
+        { "label": "&lt;tr&gt;, &lt;td&gt;", "isCorrect": false },
+        { "label": "&lt;group&gt;, &lt;section&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;table&gt;\n  &lt;thead&gt;...&lt;/thead&gt;\n  &lt;tbody&gt;...&lt;/tbody&gt;\n  &lt;tfoot&gt;...&lt;/tfoot&gt;\n&lt;/table&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;thead&gt;, &lt;tbody&gt;, and &lt;tfoot&gt; tags group rows into the header, body, and footer sections, improving semantics and aiding scrolling/printing behavior."
     },
     {
-      "conceptId": "html-thead-tbody-tfoot-elements",
-      "conceptTitle": "<thead>, <tbody>, <tfoot>",
-      "category": "HTML Table Structure",
-      "multipleChoiceQuestion": {
-        "questionText": "What is the purpose of grouping table rows with `<thead>`, `<tbody>`, and `<tfoot>`?",
-        "options": [
-          { "optionText": "It is required for tables to display correctly.", "isCorrect": false },
-          { "optionText": "It provides semantic structure, allowing browsers to scroll the body independently of the header/footer.", "isCorrect": true },
-          { "optionText": "It helps apply CSS styles but has no other effect.", "isCorrect": false },
-          { "optionText": "It is an old standard that is no longer recommended.", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "A table structured with a distinct header, body, and footer section.",
-        "html": "<table>\n  <thead>\n    <tr><th>Item</th><th>Price</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Apple</td><td>$1</td></tr>\n  </tbody>\n  <tfoot>\n    <tr><td>Total</td><td>$1</td></tr>\n  </tfoot>\n</table>",
-        "css": "thead, tfoot {\n  background-color: #f7f7f7;\n  font-weight: bold;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "These elements provide explicit structural divisions for a table's header, main content body, and footer summary. This semantic grouping helps both developers and browsers; for instance, long tables can support scrolling of the `<tbody>` while keeping the `<thead>` visible."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: Like a book has a cover (`<thead>`), pages (`<tbody>`), and an index (`<tfoot>`).",
-        "importance": "These elements improve table accessibility and can be leveraged by browsers for features like printing repeating headers on each page."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T005",
+      "conceptTitle": "Adding a caption/title to an HTML table",
+      "category": "HTML Tables",
+      "question": "Which element adds a caption/title to a HTML table?",
+      "options": [
+        { "label": "&lt;title&gt;", "isCorrect": false },
+        { "label": "&lt;caption&gt;", "isCorrect": true },
+        { "label": "&lt;header&gt;", "isCorrect": false },
+        { "label": "&lt;summary&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;table&gt;\n  &lt;caption&gt;Sales Figures&lt;/caption&gt;\n  &lt;!-- ... --&gt;\n&lt;/table&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;caption&gt; element is used immediately after the opening &lt;table&gt; tag to provide a descriptive title for the table content."
     },
     {
-      "conceptId": "html-caption-element",
-      "conceptTitle": "The <caption> Element",
-      "category": "HTML Table Structure",
-      "multipleChoiceQuestion": {
-        "questionText": "Where must the `<caption>` element be placed within a `<table>`?",
-        "options": [
-          { "optionText": "Immediately after the opening `<table>` tag.", "isCorrect": true },
-          { "optionText": "Inside the `<thead>` element.", "isCorrect": false },
-          { "optionText": "Immediately before the closing `</table>` tag.", "isCorrect": false },
-          { "optionText": "Anywhere inside the `<table>`.", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "A table with a `<caption>` providing a title or description.",
-        "html": "<table>\n  <caption>Monthly Sales Figures</caption>\n  <thead>\n    <tr><th>Month</th><th>Revenue</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>January</td><td>$10,000</td></tr>\n  </tbody>\n</table>",
-        "css": "caption {\n  font-weight: bold;\n  padding: 10px;\n  caption-side: top;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The HTML standard requires the `<caption>` element to be the very first child of a `<table>` element. It serves as the title for the table and is crucial for accessibility."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: The `<caption>` is the headline of a newspaper article about the table's data.",
-        "importance": "A `<caption>` provides context for the entire table, which is essential for screen reader users to understand the data before diving into it."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T006",
+      "conceptTitle": "Spanning a cell across multiple columns",
+      "category": "HTML Tables",
+      "question": "How do you make a cell span multiple columns?",
+      "options": [
+        { "label": "rowspan", "isCorrect": false },
+        { "label": "colspan", "isCorrect": true },
+        { "label": "spancol", "isCorrect": false },
+        { "label": "mergecol", "isCorrect": false }
+      ],
+      "codeExample": "&lt;td colspan=&quot;2&quot;&gt;Merged Data&lt;/td&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'colspan' attribute is applied to a &lt;td&gt; or &lt;th&gt; element and specifies how many columns wide that cell should be."
     },
     {
-      "conceptId": "html-colspan-attribute",
-      "conceptTitle": "The `colspan` Attribute",
-      "category": "HTML Table Attributes",
-      "multipleChoiceQuestion": {
-        "questionText": "What does the attribute `colspan=\"2\"` on a `<td>` or `<th>` element do?",
-        "options": [
-          { "optionText": "It makes the cell's text twice as large.", "isCorrect": false },
-          { "optionText": "It adds 2 pixels of padding to the cell.", "isCorrect": false },
-          { "optionText": "It merges the cell with the cell below it.", "isCorrect": false },
-          { "optionText": "It makes the cell span across two columns.", "isCorrect": true }
-        ]
-      },
-      "codeExample": {
-        "description": "A header cell (`<th>`) that spans across two columns.",
-        "html": "<table>\n  <tr>\n    <th colspan=\"2\">Full Name</th>\n  </tr>\n  <tr>\n    <td>Jane</td>\n    <td>Doe</td>\n  </tr>\n</table>",
-        "css": "table, th, td { border: 1px solid black; }"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `colspan` attribute specifies the number of columns a cell should extend ('span') horizontally. `colspan=\"2\"` effectively merges a cell with its adjacent neighbor to the right."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: Like merging cells horizontally in a spreadsheet program.",
-        "importance": "It allows for creating complex table headers and grouping data logically under a single, overarching category."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T007",
+      "conceptTitle": "CSS property for table width",
+      "category": "CSS Tables",
+      "question": "What CSS property controls the width of a table?",
+      "options": [
+        { "label": "width", "isCorrect": true },
+        { "label": "table-width", "isCorrect": false },
+        { "label": "col-width", "isCorrect": false },
+        { "label": "total-width", "isCorrect": false }
+      ],
+      "codeExample": "table { width: 80%; }",
+      "visualConcept": "",
+      "answerExplanation": "The standard 'width' CSS property is applied directly to the &lt;table&gt; element to set its overall width."
     },
     {
-      "conceptId": "html-rowspan-attribute",
-      "conceptTitle": "The `rowspan` Attribute",
-      "category": "HTML Table Attributes",
-      "multipleChoiceQuestion": {
-        "questionText": "How do you make a table cell extend vertically across three rows?",
-        "options": [
-          { "optionText": "row-span: 3;", "isCorrect": false },
-          { "optionText": "rowspan=\"3\"", "isCorrect": true },
-          { "optionText": "span-y=\"3\"", "isCorrect": false },
-          { "optionText": "colspan=\"3\"", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "A cell that spans vertically across two rows.",
-        "html": "<table>\n  <tr>\n    <th rowspan=\"2\">Contact</th>\n    <td>Email</td>\n  </tr>\n  <tr>\n    <td>Phone</td>\n  </tr>\n</table>",
-        "css": "table, th, td { border: 1px solid black; text-align: center; }"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `rowspan` attribute defines how many rows a cell should span vertically. A value of '3' would make the cell occupy its own space plus the space of the two cells directly below it."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: Like merging cells vertically in a spreadsheet program.",
-        "importance": "It is essential for creating tables where a single category or label applies to multiple rows of data, improving readability."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T008",
+      "conceptTitle": "CSS property for space between table cells",
+      "category": "CSS Tables",
+      "question": "Which CSS property sets the space between table cells?",
+      "options": [
+        { "label": "cellspacing", "isCorrect": false },
+        { "label": "border-spacing", "isCorrect": true },
+        { "label": "gap", "isCorrect": false },
+        { "label": "cellspace", "isCorrect": false }
+      ],
+      "codeExample": "table { border-spacing: 10px; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'border-spacing' property controls the distance between the borders of adjacent cells, assuming 'border-collapse' is set to 'separate' (the default)."
     },
     {
-      "conceptId": "html-scope-attribute",
-      "conceptTitle": "The `scope` Attribute",
-      "category": "HTML Table Attributes",
-      "multipleChoiceQuestion": {
-        "questionText": "What is the primary purpose of the `scope` attribute on a `<th>` element?",
-        "options": [
-          { "optionText": "To limit the CSS styles applied to the header.", "isCorrect": false },
-          { "optionText": "To define a JavaScript variable scope.", "isCorrect": false },
-          { "optionText": "To explicitly associate header cells with data cells for accessibility.", "isCorrect": true },
-          { "optionText": "To specify the width of the column.", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "Using `scope` to define column and row headers.",
-        "html": "<table>\n  <tr>\n    <th></th>\n    <th scope=\"col\">Name</th>\n    <th scope=\"col\">Age</th>\n  </tr>\n  <tr>\n    <th scope=\"row\">User 1</th>\n    <td>John</td>\n    <td>30</td>\n  </tr>\n</table>",
-        "css": "table, th, td { border: 1px solid black; }"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `scope` attribute tells assistive technologies whether a header (`<th>`) applies to the rest of the column (`scope=\"col\"`) or the rest of the row (`scope=\"row\"`). This creates a clear, programmatic link between headers and their corresponding data cells."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "`scope=\"col\"` (Header for this column) vs. `scope=\"row\"` (Header for this row).",
-        "importance": "Using `scope` significantly improves table navigation and understanding for users of screen readers."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T009",
+      "conceptTitle": "CSS for border on all table cells",
+      "category": "CSS Tables",
+      "question": "How do you apply a border to all cells within a table using CSS?",
+      "options": [
+        { "label": "border: 1px solid", "isCorrect": false },
+        { "label": "border-collapse: collapse", "isCorrect": true },
+        { "label": "border-style: all", "isCorrect": false },
+        { "label": "border-full: true", "isCorrect": false }
+      ],
+      "codeExample": "table, th, td { border: 1px solid black; }\ntable { border-collapse: collapse; }",
+      "visualConcept": "",
+      "answerExplanation": "While you must apply 'border' to &lt;th&gt; and &lt;td&gt;, setting 'border-collapse: collapse' on the &lt;table&gt; is the key step that merges adjacent borders into a single, clean line."
     },
     {
-      "conceptId": "css-border-collapse",
-      "conceptTitle": "CSS `border-collapse`",
-      "category": "CSS Table Styling",
-      "multipleChoiceQuestion": {
-        "questionText": "Which value of `border-collapse` merges adjacent cell borders into a single border?",
-        "options": [
-          { "optionText": "merge", "isCorrect": false },
-          { "optionText": "single", "isCorrect": false },
-          { "optionText": "collapse", "isCorrect": true },
-          { "optionText": "separate", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "A table with collapsed borders for a cleaner, single-line look.",
-        "html": "<table>\n  <tr>\n    <th>City</th><th>Country</th>\n  </tr>\n  <tr>\n    <td>Tokyo</td><td>Japan</td>\n  </tr>\n</table>",
-        "css": "table {\n  border-collapse: collapse;\n}\nth, td {\n  border: 1px solid #999;\n  padding: 8px;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `border-collapse: collapse;` property tells the browser to combine the borders of adjacent table cells into one. The default value is `separate`, which results in double-walled borders where cells touch."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "`separate` = Double lines. `collapse` = Single lines.",
-        "importance": "This property is fundamental for modern table design, providing a clean and efficient way to style table borders."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "R010",
+      "conceptTitle": "Making a table responsive",
+      "category": "Responsive Design",
+      "question": "What is the correct way to make a table responsive?",
+      "options": [
+        { "label": "fixed width only", "isCorrect": false },
+        { "label": "use max-width: 100%", "isCorrect": true },
+        { "label": "overflow: hidden", "isCorrect": false },
+        { "label": "set width: auto", "isCorrect": false }
+      ],
+      "codeExample": "table { max-width: 100%; height: auto; }\n/* Often wrapped in a div with overflow: auto */",
+      "visualConcept": "",
+      "answerExplanation": "Setting 'max-width: 100%' ensures the table will scale down on small screens. Tables are also commonly wrapped in a container with 'overflow: auto' to allow horizontal scrolling on small viewports."
     },
     {
-      "conceptId": "css-border-spacing",
-      "conceptTitle": "CSS `border-spacing`",
-      "category": "CSS Table Styling",
-      "multipleChoiceQuestion": {
-        "questionText": "The `border-spacing` property only has an effect when `border-collapse` is set to which value?",
-        "options": [
-          { "optionText": "collapse", "isCorrect": false },
-          { "optionText": "separate", "isCorrect": true },
-          { "optionText": "initial", "isCorrect": false },
-          { "optionText": "inherit", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "A table with separated borders and spacing between cells.",
-        "html": "<table>\n  <tr><td>A</td><td>B</td></tr>\n  <tr><td>C</td><td>D</td></tr>\n</table>",
-        "css": "table {\n  border-collapse: separate;\n  border-spacing: 10px 5px; /* 10px horizontal, 5px vertical */\n}\ntd {\n  border: 1px solid #999;\n  padding: 8px;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "`border-spacing` controls the distance between the borders of adjacent cells in a table. This is only possible when the borders are `separate`. If they are `collapse`d, there is no space between them to control."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: `border-spacing` is like the grout between tiles.",
-        "importance": "It provides fine-grained control over the whitespace inside your table, which can significantly improve readability."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T011",
+      "conceptTitle": "Purpose of the &lt;colgroup&gt; element",
+      "category": "HTML Tables",
+      "question": "What does the &lt;colgroup&gt; element do?",
+      "options": [
+        { "label": "Groups columns for styling", "isCorrect": true },
+        { "label": "Groups rows", "isCorrect": false },
+        { "label": "Adds captions", "isCorrect": false },
+        { "label": "Defines table footers", "isCorrect": false }
+      ],
+      "codeExample": "&lt;colgroup&gt;\n  &lt;col style=&quot;width: 50%&quot;&gt;\n  &lt;col span=&quot;2&quot; style=&quot;background: #eee;&quot;&gt;\n&lt;/colgroup&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;colgroup&gt; element is used to group columns in a table to apply styles and properties to those columns collectively."
     },
     {
-      "conceptId": "css-empty-cells",
-      "conceptTitle": "CSS `empty-cells`",
-      "category": "CSS Table Styling",
-      "multipleChoiceQuestion": {
-        "questionText": "What does `empty-cells: hide;` do to a table cell with no content?",
-        "options": [
-          { "optionText": "It hides the entire row containing the empty cell.", "isCorrect": false },
-          { "optionText": "It fills the cell with a default background color.", "isCorrect": false },
-          { "optionText": "It removes the border and background of the empty cell.", "isCorrect": true },
-          { "optionText": "It collapses the cell, causing other cells to shift.", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "Hiding the borders of empty cells in a table.",
-        "html": "<table>\n  <tr><td>Data</td><td>Data</td></tr>\n  <tr><td></td><td>Data</td></tr>\n</table>",
-        "css": "table {\n  border-collapse: separate;\n  border-spacing: 5px;\n  empty-cells: hide;\n}\ntd {\n  border: 1px solid #999;\n  padding: 10px;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `empty-cells` property is used to show or hide the borders and background of cells that have no content. The `hide` value makes them invisible. Note this also requires `border-collapse: separate;`."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "`empty-cells: show;` (Default) vs. `empty-cells: hide;`",
-        "importance": "This property helps in styling sparse tables, preventing empty cells from cluttering the visual presentation of the data."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T012",
+      "conceptTitle": "Tag for individual column grouping",
+      "category": "HTML Tables",
+      "question": "What tag groups individual columns for styling and attributes?",
+      "options": [
+        { "label": "&lt;colgroup&gt;", "isCorrect": false },
+        { "label": "&lt;col&gt;", "isCorrect": true },
+        { "label": "&lt;tbody&gt;", "isCorrect": false },
+        { "label": "&lt;tr&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;colgroup&gt;\n  &lt;col style=&quot;background: red;&quot;&gt;\n&lt;/colgroup&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;col&gt; tag, used inside &lt;colgroup&gt;, specifies properties for a single column or set of columns (using the 'span' attribute) in a table."
     },
     {
-      "conceptId": "css-table-layout",
-      "conceptTitle": "CSS `table-layout`",
-      "category": "CSS Table Styling",
-      "multipleChoiceQuestion": {
-        "questionText": "Which `table-layout` value often results in faster table rendering because column widths are determined by the first row?",
-        "options": [
-          { "optionText": "auto", "isCorrect": false },
-          { "optionText": "fixed", "isCorrect": true },
-          { "optionText": "fast", "isCorrect": false },
-          { "optionText": "static", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "A table with a fixed layout, where column widths are set explicitly.",
-        "html": "<table>\n  <colgroup>\n    <col style=\"width: 70%;\">\n    <col style=\"width: 30%;\">\n  </colgroup>\n  <tr>\n    <td>This is a very long sentence that might wrap.</td>\n    <td>Short</td>\n  </tr>\n</table>",
-        "css": "table {\n  width: 100%;\n  table-layout: fixed;\n  border-collapse: collapse;\n}\ntd {\n  border: 1px solid #999;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "With `table-layout: fixed;`, the browser calculates column widths based on the `width` property of the columns or the first row of cells. This is much faster than the default `auto` setting, which requires reading all content in a column to determine the ideal width."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "`auto`: Content dictates width. `fixed`: CSS dictates width.",
-        "importance": "Using `table-layout: fixed` can significantly improve performance for very large tables and provides more predictable layout behavior."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T013",
+      "conceptTitle": "CSS property for table row height",
+      "category": "CSS Tables",
+      "question": "Which CSS property controls the height of a table row?",
+      "options": [
+        { "label": "row-height", "isCorrect": false },
+        { "label": "height", "isCorrect": true },
+        { "label": "line-height", "isCorrect": false },
+        { "label": "max-height", "isCorrect": false }
+      ],
+      "codeExample": "tr { height: 50px; }",
+      "visualConcept": "",
+      "answerExplanation": "The standard 'height' property is applied to the &lt;tr&gt;, &lt;th&gt;, or &lt;td&gt; elements to control the row's height."
     },
     {
-      "conceptId": "css-vertical-align",
-      "conceptTitle": "CSS `vertical-align`",
-      "category": "CSS Table Styling",
-      "multipleChoiceQuestion": {
-        "questionText": "In the context of a table cell, which `vertical-align` value would position content at the very bottom?",
-        "options": [
-          { "optionText": "bottom", "isCorrect": true },
-          { "optionText": "middle", "isCorrect": false },
-          { "optionText": "baseline", "isCorrect": false },
-          { "optionText": "top", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "Aligning content within table cells to the top, middle, and bottom.",
-        "html": "<table>\n  <tr>\n    <td class=\"top\">Top</td>\n    <td class=\"middle\">Middle</td>\n    <td class=\"bottom\">Bottom</td>\n  </tr>\n</table>",
-        "css": "td {\n  height: 100px;\n  border: 1px solid #999;\n}\n.top { vertical-align: top; }\n.middle { vertical-align: middle; }\n.bottom { vertical-align: bottom; }"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `vertical-align` property controls the vertical positioning of content inside a container. For table cells (`<td>`, `<th>`), `bottom` aligns the content with the bottom edge of the cell."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Values: `top`, `middle`, `bottom`.",
-        "importance": "This property is essential for creating well-aligned and professional-looking tables, especially when cells in a row have different amounts of content."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T014",
+      "conceptTitle": "Styling alternate rows with CSS",
+      "category": "CSS Tables",
+      "question": "How would you style alternate rows with different colors?",
+      "options": [
+        { "label": ":nth-child(odd) selector", "isCorrect": true },
+        { "label": ":hover pseudo-class", "isCorrect": false },
+        { "label": ":first-child selector", "isCorrect": false },
+        { "label": "Specific class on &lt;tr&gt;", "isCorrect": false }
+      ],
+      "codeExample": "tbody tr:nth-child(odd) { background-color: #f2f2f2; }",
+      "visualConcept": "",
+      "answerExplanation": "The ':nth-child()' pseudo-class, specifically with 'odd' or 'even', is the most common and efficient CSS method for creating zebra-striped tables."
     },
     {
-      "conceptId": "css-nth-child-selector",
-      "conceptTitle": "The `:nth-child` Selector",
-      "category": "CSS Table Styling",
-      "multipleChoiceQuestion": {
-        "questionText": "How would you select every even-numbered row (`<tr>`) in a table to create a 'zebra stripe' effect?",
-        "options": [
-          { "optionText": "tr:even", "isCorrect": false },
-          { "optionText": "tr:nth-child(even)", "isCorrect": true },
-          { "optionText": "tr:nth-of-type(2)", "isCorrect": false },
-          { "optionText": "tr:child(even)", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "Applying a background color to every even row in a table's body.",
-        "html": "<table>\n  <tbody>\n    <tr><td>Row 1</td></tr>\n    <tr><td>Row 2</td></tr>\n    <tr><td>Row 3</td></tr>\n    <tr><td>Row 4</td></tr>\n  </tbody>\n</table>",
-        "css": "tbody tr:nth-child(even) {\n  background-color: #f2f2f2;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `:nth-child()` pseudo-class selector matches elements based on their position among their siblings. Using the keyword `even` (or `2n`) selects the 2nd, 4th, 6th, etc., child, which is perfect for styling alternating rows."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "`odd` or `2n+1` for odd rows. `even` or `2n` for even rows.",
-        "importance": "This selector allows for powerful, pattern-based styling without needing to add extra classes to your HTML, improving readability and maintainability."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T015",
+      "conceptTitle": "Attribute for spanning 3 rows",
+      "category": "HTML Tables",
+      "question": "When using rowspan, what attribute would a cell have if it spans 3 rows?",
+      "options": [
+        { "label": "rowspan=&quot;3&quot;", "isCorrect": true },
+        { "label": "colspan=&quot;3&quot;", "isCorrect": false },
+        { "label": "spanrows=&quot;3&quot;", "isCorrect": false },
+        { "label": "rows=&quot;3&quot;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;td rowspan=&quot;3&quot;&gt;Data&lt;/td&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'rowspan' attribute defines the number of rows a cell should span vertically."
     },
     {
-      "conceptId": "html-form-element",
-      "conceptTitle": "The <form> Element",
-      "category": "HTML Form Structure",
-      "multipleChoiceQuestion": {
-        "questionText": "What is the role of the `<form>` element in HTML?",
-        "options": [
-          { "optionText": "To visually style a group of input fields.", "isCorrect": false },
-          { "optionText": "To act as a container for form controls whose values can be submitted to a server.", "isCorrect": true },
-          { "optionText": "To validate user input on the client-side.", "isCorrect": false },
-          { "optionText": "To create a bordered section on a page.", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "A basic form element wrapping a label and an input field.",
-        "html": "<form action=\"/submit-data\" method=\"post\">\n  <label for=\"username\">Username:</label>\n  <input type=\"text\" id=\"username\" name=\"username\">\n</form>",
-        "css": "form {\n  padding: 1em;\n  border: 1px solid #ddd;\n  border-radius: 5px;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `<form>` element is the essential container for all form-related controls like inputs, textareas, and buttons. It defines where and how the collected data will be sent for processing."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: The `<form>` is the envelope that holds and addresses all the letters (inputs) you want to mail.",
-        "importance": "Without the `<form>` element, you cannot collect and submit user data to a server in a standard, accessible way."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "T016",
+      "conceptTitle": "Default display value of &lt;table&gt;",
+      "category": "CSS Tables",
+      "question": "What is the default display value of a &lt;table&gt; element?",
+      "options": [
+        { "label": "block", "isCorrect": false },
+        { "label": "inline-block", "isCorrect": false },
+        { "label": "table", "isCorrect": true },
+        { "label": "flex", "isCorrect": false }
+      ],
+      "codeExample": "/* Default is display: table; */",
+      "visualConcept": "",
+      "answerExplanation": "The default display value for the &lt;table&gt; element is 'table', which applies the complex layout behavior required for tables."
     },
     {
-      "conceptId": "html-label-element",
-      "conceptTitle": "The <label> Element",
-      "category": "HTML Form Structure",
-      "multipleChoiceQuestion": {
-        "questionText": "How do you correctly associate a `<label>` with an `<input>` field for the best accessibility?",
-        "options": [
-          { "optionText": "Place the `<label>` right after the `<input>`.", "isCorrect": false },
-          { "optionText": "Use the same `name` attribute on both.", "isCorrect": false },
-          { "optionText": "Use the `for` attribute on the label, matching the `id` of the input.", "isCorrect": true },
-          { "optionText": "Wrap them both in a `<div>` container.", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "Associating a label with an input using the `for` and `id` attributes.",
-        "html": "<label for=\"user-email\">Email Address:</label>\n<input type=\"email\" id=\"user-email\" name=\"email\">",
-        "css": "label {\n  display: block;\n  margin-bottom: 5px;\n  font-weight: bold;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `for` attribute of the `<label>` creates a programmatic link to the `<input>` that has a matching `id`. This allows screen readers to announce the label when the input is focused, and lets users click the label to focus the input field."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "`<label for=\"name\">` pairs with `<input id=\"name\">`",
-        "importance": "Correctly linked labels are one of the most critical aspects of web form accessibility, improving usability for everyone."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "C017",
+      "conceptTitle": "Defining column count in multi-column layout",
+      "category": "CSS Columns",
+      "question": "Which attribute helps to define the number of columns in a multi-column CSS layout?",
+      "options": [
+        { "label": "column-count", "isCorrect": true },
+        { "label": "column-number", "isCorrect": false },
+        { "label": "columns", "isCorrect": false },
+        { "label": "col-count", "isCorrect": false }
+      ],
+      "codeExample": "div { column-count: 3; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'column-count' property specifies the exact number of columns an element's content should be divided into."
     },
     {
-      "conceptId": "html-input-element",
-      "conceptTitle": "The <input> Element",
-      "category": "HTML Form Inputs",
-      "multipleChoiceQuestion": {
-        "questionText": "Which attribute of the `<input>` element is most critical for determining its function (e.g., a text box vs. a checkbox)?",
-        "options": [
-          { "optionText": "name", "isCorrect": false },
-          { "optionText": "id", "isCorrect": false },
-          { "optionText": "class", "isCorrect": false },
-          { "optionText": "type", "isCorrect": true }
-        ]
-      },
-      "codeExample": {
-        "description": "An `<input>` element with `type=\"text\"` for single-line text entry.",
-        "html": "<label for=\"first-name\">First Name:</label>\n<input type=\"text\" id=\"first-name\" name=\"first_name\">",
-        "css": "input[type=\"text\"] {\n  padding: 8px;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}"
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `type` attribute is fundamental to the `<input>` element. It dictates the kind of data control to render and what kind of data is expected, such as `text`, `password`, `email`, `number`, `checkbox`, etc."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "<input type=\"text\"> vs. <input type=\"checkbox\">",
-        "importance": "Using the correct type is essential for semantic meaning, client-side validation, and providing the user with the most appropriate input mechanism (e.g., a numeric keypad for type=\"number\")."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "C018",
+      "conceptTitle": "Defining column width in multi-column layout",
+      "category": "CSS Columns",
+      "question": "To define the width of columns in CSS multi-column layout which property is used?",
+      "options": [
+        { "label": "column-width", "isCorrect": true },
+        { "label": "col-width", "isCorrect": false },
+        { "label": "width", "isCorrect": false },
+        { "label": "span-columns", "isCorrect": false }
+      ],
+      "codeExample": "div { column-width: 150px; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'column-width' property sets a preferred, minimum width for the columns. The browser calculates the actual number of columns based on the container size."
     },
     {
-      "conceptId": "html-datalist-element",
-      "conceptTitle": "The <datalist> Element",
-      "category": "HTML Form Inputs",
-      "multipleChoiceQuestion": {
-        "questionText": "What element provides a list of suggested, pre-defined options for an `<input>` field?",
-        "options": [
-          { "optionText": "<select>", "isCorrect": false },
-          { "optionText": "<datalist>", "isCorrect": true },
-          { "optionText": "<options>", "isCorrect": false },
-          { "optionText": "<suggestion>", "isCorrect": false }
-        ]
-      },
-      "codeExample": {
-        "description": "Associating an input with a `datalist` using the `list` attribute.",
-        "html": "<input list=\"browsers\">\n<datalist id=\"browsers\">\n  <option value=\"Chrome\">\n  <option value=\"Firefox\">\n  <option value=\"Safari\">\n</datalist>",
-        "css": ""
-      },
-      "answerExplanation": {
-        "title": "Why This is Correct",
-        "text": "The `<datalist>` element defines a set of pre-defined options for a `<input>` element. The user can either select from the list or type their own free-form text."
-      },
-      "visualConcept": {
-        "title": "Visualizing the Concept",
-        "snippetOrAnalogy": "Analogy: Like the predictive text suggestions you see when typing a search query.",
-        "importance": "It enhances user experience by offering hints while retaining the flexibility of a text input."
-      },
-      "personalNotes": {
-        "placeholder": "📝 Add your personal notes and insights here..."
-      },
-      "progressStatus": "unanswered"
+      "conceptId": "C019",
+      "conceptTitle": "Spacing between columns in CSS",
+      "category": "CSS Columns",
+      "question": "How is the spacing between columns controlled in CSS?",
+      "options": [
+        { "label": "column-gap", "isCorrect": true },
+        { "label": "gap-between", "isCorrect": false },
+        { "label": "column-space", "isCorrect": false },
+        { "label": "col-spacing", "isCorrect": false }
+      ],
+      "codeExample": "div { column-gap: 20px; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'column-gap' property sets the space (gutter) between the columns in a multi-column layout."
+    },
+    {
+      "conceptId": "C020",
+      "conceptTitle": "Adding a vertical line between columns",
+      "category": "CSS Columns",
+      "question": "Which CSS property adds a vertical line between columns?",
+      "options": [
+        { "label": "column-border", "isCorrect": false },
+        { "label": "column-rule", "isCorrect": true },
+        { "label": "col-border", "isCorrect": false },
+        { "label": "col-rule", "isCorrect": false }
+      ],
+      "codeExample": "div { column-rule: 1px solid #ccc; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'column-rule' property is a shorthand for 'column-rule-width', 'column-rule-style', and 'column-rule-color', placing a separator in the column gap."
+    },
+    {
+      "conceptId": "C021",
+      "conceptTitle": "Manually forcing a column break",
+      "category": "CSS Columns",
+      "question": "How do you manually force a column break in multi-column layout?",
+      "options": [
+        { "label": "break-after: column", "isCorrect": true },
+        { "label": "column-break-after: always", "isCorrect": false },
+        { "label": "break-column: always", "isCorrect": false },
+        { "label": "column-break: forced", "isCorrect": false }
+      ],
+      "codeExample": "h2 { break-after: column; }",
+      "visualConcept": "",
+      "answerExplanation": "The modern CSS property for forcing a break is 'break-after: column', applied to an element to ensure the next content starts in a new column."
+    },
+    {
+      "conceptId": "T022",
+      "conceptTitle": "Purpose of the &lt;tfoot&gt; element",
+      "category": "HTML Tables",
+      "question": "What is the purpose of the &lt;tfoot&gt; element in a table?",
+      "options": [
+        { "label": "Contains footer rows for summary data", "isCorrect": true },
+        { "label": "Contains all rows", "isCorrect": false },
+        { "label": "Replaces &lt;tbody&gt;", "isCorrect": false },
+        { "label": "Contains header rows", "isCorrect": false }
+      ],
+      "codeExample": "&lt;tfoot&gt;\n  &lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;Total: $99.00&lt;/td&gt;&lt;/tr&gt;\n&lt;/tfoot&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;tfoot&gt; element is used to group the content in the footer of an HTML table, typically for summary data like totals or footnotes."
+    },
+    {
+      "conceptId": "T023",
+      "conceptTitle": "Styling a table caption with CSS",
+      "category": "CSS Tables",
+      "question": "How can you style a table caption with CSS?",
+      "options": [
+        { "label": "caption { text-align: center; }", "isCorrect": true },
+        { "label": "table-caption { style: center; }", "isCorrect": false },
+        { "label": "caption-style { align: center; }", "isCorrect": false },
+        { "label": "#caption { position: center; }", "isCorrect": false }
+      ],
+      "codeExample": "caption { \n  font-weight: bold;\n  padding: 10px;\n}",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;caption&gt; element is a standard element that can be targeted and styled directly using the 'caption' CSS selector."
+    },
+    {
+      "conceptId": "T024",
+      "conceptTitle": "Semantic purpose of &lt;thead&gt;",
+      "category": "HTML Tables",
+      "question": "What is the semantic purpose of using &lt;thead&gt;?",
+      "options": [
+        { "label": "Defines header rows for accessibility and styling", "isCorrect": true },
+        { "label": "Group footer rows", "isCorrect": false },
+        { "label": "Wrap captions", "isCorrect": false },
+        { "label": "Group all rows", "isCorrect": false }
+      ],
+      "codeExample": "&lt;thead&gt;\n  &lt;tr&gt;...&lt;/tr&gt;\n&lt;/thead&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;thead&gt; element explicitly defines the block of rows containing column headers, which is vital for screen readers and allows the browser to keep the header visible when scrolling a long table."
+    },
+    {
+      "conceptId": "R025",
+      "conceptTitle": "Importance of semantic table markup",
+      "category": "Responsive Design",
+      "question": "When designing tables, why is semantic markup important?",
+      "options": [
+        { "label": "Easier for screen readers and search engines", "isCorrect": true },
+        { "label": "It is easier to write", "isCorrect": false },
+        { "label": "Design color easier", "isCorrect": false },
+        { "label": "None", "isCorrect": false }
+      ],
+      "codeExample": "/* Using &lt;th&gt; and scope attributes */",
+      "visualConcept": "",
+      "answerExplanation": "Semantic markup provides meaning to the content structure. For tables, this allows assistive technologies (like screen readers) to correctly interpret the relationship between header cells and data cells."
+    },
+    {
+      "conceptId": "T026",
+      "conceptTitle": "Preventing table borders from overlapping",
+      "category": "CSS Tables",
+      "question": "What CSS property helps prevent table borders overlapping?",
+      "options": [
+        { "label": "border-collapse", "isCorrect": true },
+        { "label": "border-spacing", "isCorrect": false },
+        { "label": "border-width", "isCorrect": false },
+        { "label": "border-stroke", "isCorrect": false }
+      ],
+      "codeExample": "table { border-collapse: collapse; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'border-collapse' property controls whether borders between table cells are separated or merged into a single border. Setting it to 'collapse' prevents overlapping."
+    },
+    {
+      "conceptId": "T027",
+      "conceptTitle": "Styling a specific column group with CSS",
+      "category": "CSS Tables",
+      "question": "How do you include content in a specific column group with CSS?",
+      "options": [
+        { "label": "Use the nth-child selector on col elements", "isCorrect": true },
+        { "label": "Use colgroup attribute", "isCorrect": false },
+        { "label": "Use col attribute only", "isCorrect": false },
+        { "label": "Apply classes to tbody", "isCorrect": false }
+      ],
+      "codeExample": "&lt;colgroup&gt;&lt;col class=&quot;special&quot;&gt;&lt;col&gt;&lt;/colgroup&gt;",
+      "visualConcept": "",
+      "answerExplanation": "You can target specific &lt;col&gt; elements using CSS selectors like 'colgroup:nth-child(n) &gt; col', but often the simplest way is applying a class directly to the &lt;col&gt; tag."
+    },
+    {
+      "conceptId": "R028",
+      "conceptTitle": "Best CSS unit for responsive column widths",
+      "category": "Responsive Design",
+      "question": "Which CSS unit works best for responsive column widths?",
+      "options": [
+        { "label": "px", "isCorrect": false },
+        { "label": "em", "isCorrect": false },
+        { "label": "%", "isCorrect": true },
+        { "label": "cm", "isCorrect": false }
+      ],
+      "codeExample": "td { width: 25%; }",
+      "visualConcept": "",
+      "answerExplanation": "Percentage (%) units define widths relative to the container element, which is fundamental to fluid, responsive layouts where elements must adjust to screen size."
+    },
+    {
+      "conceptId": "T029",
+      "conceptTitle": "Styling only the first row of a table",
+      "category": "CSS Tables",
+      "question": "How do you assign a particular style only to the first row of a table?",
+      "options": [
+        { "label": "tbody tr:first-child", "isCorrect": true },
+        { "label": "tr:first-row", "isCorrect": false },
+        { "label": "first-row { }", "isCorrect": false },
+        { "label": "tr:first", "isCorrect": false }
+      ],
+      "codeExample": "tbody tr:first-child { font-style: italic; }",
+      "visualConcept": "",
+      "answerExplanation": "The ':first-child' pseudo-class, applied to the &lt;tr&gt; element within &lt;tbody&gt;, targets the very first data row."
+    },
+    {
+      "conceptId": "T030",
+      "conceptTitle": "Accessible table captions best practice",
+      "category": "HTML Tables",
+      "question": "Best practice for adding accessible table captions is:",
+      "options": [
+        { "label": "Use &lt;caption&gt; inside &lt;table&gt;", "isCorrect": true },
+        { "label": "Use &lt;figcaption&gt; outside table", "isCorrect": false },
+        { "label": "Add titles only via CSS", "isCorrect": false },
+        { "label": "Use aria-label only", "isCorrect": false }
+      ],
+      "codeExample": "&lt;table&gt;\n  &lt;caption&gt;...&lt;/caption&gt;\n&lt;/table&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;caption&gt; element is the semantic way to provide an accessible title or summary for a table's content, placing it directly inside the &lt;table&gt; tag."
+    },
+    {
+      "conceptId": "T031",
+      "conceptTitle": "Collapsing table borders into a single border",
+      "category": "CSS Tables",
+      "question": "Which property can you use to collapse table borders into a single border?",
+      "options": [
+        { "label": "border-collapse: collapse", "isCorrect": true },
+        { "label": "border-style: collapse", "isCorrect": false },
+        { "label": "border-merge: true", "isCorrect": false },
+        { "label": "border-spacing: 0", "isCorrect": false }
+      ],
+      "codeExample": "table { border-collapse: collapse; }",
+      "visualConcept": "",
+      "answerExplanation": "Setting 'border-collapse' to 'collapse' causes adjacent cell borders to merge into a single border, eliminating double lines and making for a cleaner look."
+    },
+    {
+      "conceptId": "T032",
+      "conceptTitle": "Difference between &lt;th&gt; and &lt;td&gt;",
+      "category": "HTML Tables",
+      "question": "What is the main difference between &lt;th&gt; and &lt;td&gt; elements?",
+      "options": [
+        { "label": "&lt;th&gt; is header cells, &lt;td&gt; is data cells", "isCorrect": true },
+        { "label": "&lt;th&gt; is for tables, &lt;td&gt; for lists", "isCorrect": false },
+        { "label": "&lt;td&gt; is a header cell", "isCorrect": false },
+        { "label": "No difference", "isCorrect": false }
+      ],
+      "codeExample": "&lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;",
+      "visualConcept": "",
+      "answerExplanation": "&lt;th&gt; provides semantic meaning that a cell is a header for a column or row, while &lt;td&gt; is for standard data content."
+    },
+    {
+      "conceptId": "T033",
+      "conceptTitle": "CSS property for table row height",
+      "category": "CSS Tables",
+      "question": "Which CSS property changes the height of table rows?",
+      "options": [
+        { "label": "height", "isCorrect": true },
+        { "label": "line-height", "isCorrect": false },
+        { "label": "cell-height", "isCorrect": false },
+        { "label": "row-size", "isCorrect": false }
+      ],
+      "codeExample": "tr { height: 40px; }",
+      "visualConcept": "",
+      "answerExplanation": "The standard 'height' property is used to set the row height. 'line-height' controls the space between lines of text within the cell."
+    },
+    {
+      "conceptId": "T034",
+      "conceptTitle": "Why use &lt;col&gt; with &lt;colgroup&gt;?",
+      "category": "HTML Tables",
+      "question": "Why use &lt;col&gt; with &lt;colgroup&gt;?",
+      "options": [
+        { "label": "To assign styles and properties to individual columns", "isCorrect": true },
+        { "label": "To space cells", "isCorrect": false },
+        { "label": "To merge cells", "isCorrect": false },
+        { "label": "To format captions", "isCorrect": false }
+      ],
+      "codeExample": "&lt;colgroup&gt;&lt;col class=&quot;id-col&quot;&gt;&lt;/colgroup&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;col&gt; tag is the mechanism used within a &lt;colgroup&gt; to target and apply styles (like width or background color) to individual columns."
+    },
+    {
+      "conceptId": "T035",
+      "conceptTitle": "Targeting all columns within a &lt;colgroup&gt;",
+      "category": "CSS Tables",
+      "question": "How to target all columns within a &lt;colgroup&gt;?",
+      "options": [
+        { "label": "colgroup col { }", "isCorrect": true },
+        { "label": "table columns { }", "isCorrect": false },
+        { "label": "colgroup > col { }", "isCorrect": false },
+        { "label": "colgroup { }", "isCorrect": false }
+      ],
+      "codeExample": "colgroup col { background-color: lightblue; }",
+      "visualConcept": "",
+      "answerExplanation": "The descendant selector 'colgroup col' correctly targets all &lt;col&gt; elements that are inside a &lt;colgroup&gt; container."
+    },
+    {
+      "conceptId": "C036",
+      "conceptTitle": "Spanning content across multiple columns in CSS",
+      "category": "CSS Columns",
+      "question": "What is the correct way to span content across multiple columns in CSS?",
+      "options": [
+        { "label": "grid-column: span n", "isCorrect": false },
+        { "label": "column-span: all", "isCorrect": true },
+        { "label": "span-column: true", "isCorrect": false },
+        { "label": "multi-col-span: n", "isCorrect": false }
+      ],
+      "codeExample": "h1 { column-span: all; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'column-span: all' property is applied to a child element within a multi-column container to make it span across all columns."
+    },
+    {
+      "conceptId": "C037",
+      "conceptTitle": "Effect of setting column-count to 3",
+      "category": "CSS Columns",
+      "question": "What happens if you set column-count to 3?",
+      "options": [
+        { "label": "Content flows into 3 columns", "isCorrect": true },
+        { "label": "3 tables created", "isCorrect": false },
+        { "label": "Rows divide by 3", "isCorrect": false },
+        { "label": "Columns hidden", "isCorrect": false }
+      ],
+      "codeExample": "div { column-count: 3; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'column-count' property dictates that the element's content should be evenly distributed into the specified number of columns (3, in this case)."
+    },
+    {
+      "conceptId": "R038",
+      "conceptTitle": "How row/column groups improve table semantics",
+      "category": "Responsive Design",
+      "question": "How do row and column groups improve table semantics?",
+      "options": [
+        { "label": "Define logical groups aiding accessibility and styles", "isCorrect": true },
+        { "label": "Improve table width", "isCorrect": false },
+        { "label": "Add color", "isCorrect": false },
+        { "label": "None", "isCorrect": false }
+      ],
+      "codeExample": "/* &lt;thead&gt;, &lt;tbody&gt;, &lt;colgroup&gt; */",
+      "visualConcept": "",
+      "answerExplanation": "Grouping tags like &lt;thead&gt; and &lt;colgroup&gt; provide structure that screen readers and other tools can use to understand the table's logical components."
+    },
+    {
+      "conceptId": "C039",
+      "conceptTitle": "Controlling break behavior in multicolumn layouts",
+      "category": "CSS Columns",
+      "question": "What CSS property can you use to control break behavior in multicolumn layouts?",
+      "options": [
+        { "label": "break-inside", "isCorrect": true },
+        { "label": "column-break", "isCorrect": false },
+        { "label": "row-break", "isCorrect": false },
+        { "label": "break-column", "isCorrect": false }
+      ],
+      "codeExample": "p { break-inside: avoid; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'break-inside: avoid' property, when applied to a child element, prevents a column break from occurring *inside* that element."
+    },
+    {
+      "conceptId": "T040",
+      "conceptTitle": "Tag for grouping body rows in a table",
+      "category": "HTML Tables",
+      "question": "Which tag is used to group body rows in a table?",
+      "options": [
+        { "label": "&lt;tbody&gt;", "isCorrect": true },
+        { "label": "&lt;thead&gt;", "isCorrect": false },
+        { "label": "&lt;tfoot&gt;", "isCorrect": false },
+        { "label": "&lt;colgroup&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;tbody&gt;\n  &lt;tr&gt;...&lt;/tr&gt;\n  &lt;tr&gt;...&lt;/tr&gt;\n&lt;/tbody&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;tbody&gt; element groups the main, functional rows of data in a table."
+    },
+    {
+      "conceptId": "C041",
+      "conceptTitle": "Separating content vertically in CSS multi-column layouts",
+      "category": "CSS Columns",
+      "question": "Tabs that help separate content vertically in CSS multi-column layouts use:",
+      "options": [
+        { "label": "column-gap", "isCorrect": true },
+        { "label": "padding", "isCorrect": false },
+        { "label": "margin", "isCorrect": false },
+        { "label": "column-pad", "isCorrect": false }
+      ],
+      "codeExample": "div { column-gap: 20px; }",
+      "visualConcept": "",
+      "answerExplanation": "The space between columns (the gutter) is controlled using the 'column-gap' property."
+    },
+    {
+      "conceptId": "T042",
+      "conceptTitle": "Element for footer rows in a table",
+      "category": "HTML Tables",
+      "question": "What should be used for the footer rows in a table?",
+      "options": [
+        { "label": "&lt;tfoot&gt;", "isCorrect": true },
+        { "label": "&lt;tbody&gt;", "isCorrect": false },
+        { "label": "&lt;tfootgroup&gt;", "isCorrect": false },
+        { "label": "&lt;tfootrow&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;tfoot&gt;\n  &lt;tr&gt;...&lt;/tr&gt;\n&lt;/tfoot&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;tfoot&gt; element semantically groups the rows designated as the table footer."
+    },
+    {
+      "conceptId": "T043",
+      "conceptTitle": "Element describing a single data cell",
+      "category": "HTML Tables",
+      "question": "Which element describes a single data cell in a table?",
+      "options": [
+        { "label": "&lt;td&gt;", "isCorrect": true },
+        { "label": "&lt;tr&gt;", "isCorrect": false },
+        { "label": "&lt;th&gt;", "isCorrect": false },
+        { "label": "&lt;table&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;td&gt;Cell Data&lt;/td&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;td&gt; element represents a single data cell within a row."
+    },
+    {
+      "conceptId": "T044",
+      "conceptTitle": "Vertically aligning content in a table cell",
+      "category": "CSS Tables",
+      "question": "How would you vertically align content in a table cell?",
+      "options": [
+        { "label": "vertical-align CSS property", "isCorrect": true },
+        { "label": "align-content", "isCorrect": false },
+        { "label": "justify-content", "isCorrect": false },
+        { "label": "text-align", "isCorrect": false }
+      ],
+      "codeExample": "td { vertical-align: middle; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'vertical-align' property is specifically used for vertical alignment of content inside table cells (&lt;td&gt; or &lt;th&gt;)."
+    },
+    {
+      "conceptId": "T045",
+      "conceptTitle": "Applying styles to specific rows",
+      "category": "CSS Tables",
+      "question": "To apply styles to specific rows, use:",
+      "options": [
+        { "label": "nth-child selectors on &lt;tr&gt;", "isCorrect": true },
+        { "label": "nth-child selectors on &lt;td&gt;", "isCorrect": false },
+        { "label": "Classes on &lt;tbody&gt;", "isCorrect": false },
+        { "label": "pseudo classes on &lt;tbody&gt;", "isCorrect": false }
+      ],
+      "codeExample": "tr:nth-child(5) { background: yellow; }",
+      "visualConcept": "",
+      "answerExplanation": "The ':nth-child(n)' pseudo-class is the standard way to target a row based on its position within its parent container."
+    },
+    {
+      "conceptId": "T046",
+      "conceptTitle": "Including an accessible table caption",
+      "category": "HTML Tables",
+      "question": "How do you include a table caption that is accessible?",
+      "options": [
+        { "label": "Use the &lt;caption&gt; tag inside &lt;table&gt; with descriptive text", "isCorrect": true },
+        { "label": "Use aria-label only", "isCorrect": false },
+        { "label": "Provide alt text", "isCorrect": false },
+        { "label": "Use &lt;header&gt; inside table", "isCorrect": false }
+      ],
+      "codeExample": "&lt;table&gt;&lt;caption&gt;...&lt;/caption&gt;...&lt;/table&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;caption&gt; element is built specifically for this purpose and is easily consumed by accessibility tools."
+    },
+    {
+      "conceptId": "T047",
+      "conceptTitle": "Making a table header row sticky",
+      "category": "CSS Tables",
+      "question": "How to make a table header row sticky during scrolling?",
+      "options": [
+        { "label": "CSS position: sticky on &lt;thead&gt;", "isCorrect": true },
+        { "label": "CSS float: fixed on &lt;thead&gt;", "isCorrect": false },
+        { "label": "Use JavaScript only", "isCorrect": false },
+        { "label": "Set height on &lt;thead&gt;", "isCorrect": false }
+      ],
+      "codeExample": "thead { position: sticky; top: 0; background: white; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'position: sticky' property, combined with 'top: 0', is the modern CSS solution for making the header row remain visible while the table body scrolls."
+    },
+    {
+      "conceptId": "T048",
+      "conceptTitle": "Attribute to span a cell horizontally",
+      "category": "HTML Tables",
+      "question": "What attribute is required to span a cell horizontally?",
+      "options": [
+        { "label": "colspan", "isCorrect": true },
+        { "label": "rowspan", "isCorrect": false },
+        { "label": "spancol", "isCorrect": false },
+        { "label": "spanrow", "isCorrect": false }
+      ],
+      "codeExample": "&lt;td colspan=&quot;4&quot;&gt;...&lt;/td&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'colspan' attribute merges a cell across multiple columns (horizontally)."
+    },
+    {
+      "conceptId": "T049",
+      "conceptTitle": "Tag grouping content in table footer",
+      "category": "HTML Tables",
+      "question": "Which tag groups content in table footer?",
+      "options": [
+        { "label": "&lt;tfoot&gt;", "isCorrect": true },
+        { "label": "&lt;tbody&gt;", "isCorrect": false },
+        { "label": "&lt;tfootgroup&gt;", "isCorrect": false },
+        { "label": "&lt;tfootrow&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;tfoot&gt;\n  &lt;tr&gt;...&lt;/tr&gt;\n&lt;/tfoot&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;tfoot&gt; element is the designated tag for semantic grouping of footer content."
+    },
+    {
+      "conceptId": "R050",
+      "conceptTitle": "Recommended accessibility use for tables",
+      "category": "Responsive Design",
+      "question": "When designing tables for accessibility, which use is recommended?",
+      "options": [
+        { "label": "Use semantic tags like &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;, &lt;caption&gt;", "isCorrect": true },
+        { "label": "Use divs instead of tables", "isCorrect": false },
+        { "label": "Use tables only for layout", "isCorrect": false },
+        { "label": "Remove captions", "isCorrect": false }
+      ],
+      "codeExample": "/* Consistent use of grouping tags */",
+      "visualConcept": "",
+      "answerExplanation": "Semantic tags provide screen readers with the necessary context to understand the table's structure and the relationship between header and data cells."
+    },
+    {
+      "conceptId": "T051",
+      "conceptTitle": "Creating a multi-row header cell",
+      "category": "HTML Tables",
+      "question": "What HTML tag attribute is used to create a header cell that spans multiple rows?",
+      "options": [
+        { "label": "colspan", "isCorrect": false },
+        { "label": "rowspan", "isCorrect": true },
+        { "label": "spanrows", "isCorrect": false },
+        { "label": "row-span", "isCorrect": false }
+      ],
+      "codeExample": "&lt;th rowspan=&quot;2&quot;&gt;Category&lt;/th&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'rowspan' attribute is used on a &lt;th&gt; element to make it span vertically across the specified number of rows."
+    },
+    {
+      "conceptId": "T052",
+      "conceptTitle": "Optional but recommended table row grouping tag",
+      "category": "HTML Tables",
+      "question": "Which table row grouping tag is *optional* but recommended for semantic completeness?",
+      "options": [
+        { "label": "&lt;tr&gt;", "isCorrect": false },
+        { "label": "&lt;tbody&gt;", "isCorrect": true },
+        { "label": "&lt;td&gt;", "isCorrect": false },
+        { "label": "&lt;table&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;tbody&gt;&lt;tr&gt;...&lt;/tr&gt;&lt;/tbody&gt;",
+      "visualConcept": "",
+      "answerExplanation": "If omitted, the browser automatically infers and wraps the data rows in &lt;tbody&gt;. Explicitly including it is a best practice."
+    },
+    {
+      "conceptId": "T053",
+      "conceptTitle": "Purpose of the scope attribute on th",
+      "category": "HTML Tables",
+      "question": "What is the primary purpose of the 'scope' attribute on the &lt;th&gt; element?",
+      "options": [
+        { "label": "Defines the cell's background color", "isCorrect": false },
+        { "label": "Defines whether the header applies to a row or a column", "isCorrect": true },
+        { "label": "Sets the column width", "isCorrect": false },
+        { "label": "Indicates the cell's accessibility role", "isCorrect": false }
+      ],
+      "codeExample": "&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'scope' attribute (with values like 'col' or 'row') explicitly tells assistive technologies what data the header cell relates to."
+    },
+    {
+      "conceptId": "T054",
+      "conceptTitle": "CSS equivalent to deprecated cellpadding",
+      "category": "CSS Tables",
+      "question": "Which CSS property is the modern equivalent to the deprecated HTML 'cellpadding' attribute?",
+      "options": [
+        { "label": "border-spacing", "isCorrect": false },
+        { "label": "cell-padding", "isCorrect": false },
+        { "label": "padding applied to &lt;td&gt; and &lt;th&gt;", "isCorrect": true },
+        { "label": "margin applied to &lt;td&gt;", "isCorrect": false }
+      ],
+      "codeExample": "td, th { padding: 10px; }",
+      "visualConcept": "",
+      "answerExplanation": "Cell padding is the space between the cell content and its border, which is controlled in CSS using the 'padding' property on the &lt;td&gt; and &lt;th&gt; elements."
+    },
+    {
+      "conceptId": "T055",
+      "conceptTitle": "Controlling table caption side",
+      "category": "CSS Tables",
+      "question": "Which CSS property is used to place the &lt;caption&gt; on the bottom of the table?",
+      "options": [
+        { "label": "caption-align: bottom", "isCorrect": false },
+        { "label": "caption-side: bottom", "isCorrect": true },
+        { "label": "text-align: bottom", "isCorrect": false },
+        { "label": "caption-position: below", "isCorrect": false }
+      ],
+      "codeExample": "table { caption-side: bottom; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'caption-side' property controls whether the &lt;caption&gt; is placed above ('top', the default) or below ('bottom') the table."
+    },
+    {
+      "conceptId": "T056",
+      "conceptTitle": "CSS property for fixed table layout",
+      "category": "CSS Tables",
+      "question": "Which CSS property allows you to define a fixed table layout, where column widths are determined by the first row?",
+      "options": [
+        { "label": "table-style: fixed", "isCorrect": false },
+        { "label": "table-layout: fixed", "isCorrect": true },
+        { "label": "column-layout: fixed", "isCorrect": false },
+        { "label": "width: fixed", "isCorrect": false }
+      ],
+      "codeExample": "table { table-layout: fixed; }",
+      "visualConcept": "",
+      "answerExplanation": "When 'table-layout: fixed' is used, the browser can render the table much faster because it does not have to read all content before determining column widths."
+    },
+    {
+      "conceptId": "T057",
+      "conceptTitle": "Semantic structure order for a table",
+      "category": "HTML Tables",
+      "question": "What is the correct semantic structure order for a table with all grouping elements?",
+      "options": [
+        { "label": "&lt;caption&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;", "isCorrect": false },
+        { "label": "&lt;caption&gt;, &lt;colgroup&gt;, &lt;thead&gt;, &lt;tfoot&gt;, &lt;tbody&gt;", "isCorrect": true },
+        { "label": "&lt;thead&gt;, &lt;tfoot&gt;, &lt;caption&gt;, &lt;tbody&gt;", "isCorrect": false },
+        { "label": "&lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;table&gt;...&lt;/table&gt;",
+      "visualConcept": "",
+      "answerExplanation": "Inside &lt;table&gt;, the order is: &lt;caption&gt; (optional), &lt;colgroup&gt; (optional), then the row-grouping elements: &lt;thead&gt;, &lt;tfoot&gt;, and finally &lt;tbody&gt;."
+    },
+    {
+      "conceptId": "T058",
+      "conceptTitle": "Table section for aggregate data",
+      "category": "HTML Tables",
+      "question": "In which section of a table should aggregate data or summary statistics typically be placed?",
+      "options": [
+        { "label": "&lt;thead&gt;", "isCorrect": false },
+        { "label": "&lt;tfoot&gt;", "isCorrect": true },
+        { "label": "&lt;summary&gt;", "isCorrect": false },
+        { "label": "The last row of &lt;tbody&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Grand Total&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;tfoot&gt; element is semantically intended for summary or footer information related to the table data."
+    },
+    {
+      "conceptId": "T059",
+      "conceptTitle": "Browser behavior when &lt;tbody&gt; is omitted",
+      "category": "HTML Tables",
+      "question": "What happens if you omit &lt;tbody&gt; but include &lt;tr&gt; and &lt;td&gt; inside &lt;table&gt;?",
+      "options": [
+        { "label": "The table will not render.", "isCorrect": false },
+        { "label": "The rows are automatically wrapped in an inferred &lt;tbody&gt;.", "isCorrect": true },
+        { "label": "The rows are placed inside &lt;thead&gt;.", "isCorrect": false },
+        { "label": "The table uses 'display: block' instead of 'display: table'.", "isCorrect": false }
+      ],
+      "codeExample": "&lt;table&gt;&lt;tr&gt;...&lt;/tr&gt;&lt;/table&gt;",
+      "visualConcept": "",
+      "answerExplanation": "Modern browsers automatically correct this common omission by wrapping the &lt;tr&gt; elements in a generated &lt;tbody&gt; element."
+    },
+    {
+      "conceptId": "T060",
+      "conceptTitle": "The 'border' attribute CSS replacement",
+      "category": "CSS Tables",
+      "question": "The deprecated 'border' attribute on the &lt;table&gt; tag is best replaced by which CSS property?",
+      "options": [
+        { "label": "table-border", "isCorrect": false },
+        { "label": "border applied to &lt;table&gt;, &lt;th&gt;, and &lt;td&gt;", "isCorrect": true },
+        { "label": "outline", "isCorrect": false },
+        { "label": "border-width", "isCorrect": false }
+      ],
+      "codeExample": "table, th, td { border: 1px solid black; }",
+      "visualConcept": "",
+      "answerExplanation": "To fully replicate the old 'border' attribute, you must apply the 'border' property to the table, header cells, and data cells, typically combined with 'border-collapse: collapse'."
+    },
+    {
+      "conceptId": "F061",
+      "conceptTitle": "Element for creating a submit button",
+      "category": "HTML Forms",
+      "question": "Which element is commonly used to create a submit button that can contain content like images?",
+      "options": [
+        { "label": "&lt;input type=&quot;submit&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;button type=&quot;submit&quot;&gt;", "isCorrect": true },
+        { "label": "&lt;a role=&quot;button&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;span class=&quot;submit&quot;&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;button type=&quot;submit&quot;&gt;Send Data&lt;/button&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;button&gt; tag is preferred over &lt;input type=\"submit\"&gt; because it allows you to place rich content (HTML) inside the button."
+    },
+    {
+      "conceptId": "F062",
+      "conceptTitle": "Purpose of the 'action' attribute",
+      "category": "HTML Forms",
+      "question": "What is the primary purpose of the 'action' attribute on the &lt;form&gt; element?",
+      "options": [
+        { "label": "Defines the form's name", "isCorrect": false },
+        { "label": "Specifies the URL to send the form data to upon submission", "isCorrect": true },
+        { "label": "Sets the HTTP method (GET or POST)", "isCorrect": false },
+        { "label": "Determines if the form should be validated", "isCorrect": false }
+      ],
+      "codeExample": "&lt;form action=&quot;/process.php&quot;&gt;...&lt;/form&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'action' attribute tells the browser where to send the collected form data."
+    },
+    {
+      "conceptId": "F063",
+      "conceptTitle": "Associating a form field with its label",
+      "category": "HTML Forms",
+      "question": "Which attribute is crucial for associating a form field with its &lt;label&gt; for accessibility?",
+      "options": [
+        { "label": "The 'name' attribute on both", "isCorrect": false },
+        { "label": "The 'for' attribute on &lt;label&gt; matching the 'id' of the input", "isCorrect": true },
+        { "label": "The 'value' attribute on both", "isCorrect": false },
+        { "label": "The 'type' attribute on the input", "isCorrect": false }
+      ],
+      "codeExample": "&lt;label for=&quot;user&quot;&gt;User&lt;/label&gt;&lt;input id=&quot;user&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'for' attribute on &lt;label&gt; must match the 'id' attribute of the related form control. This allows users to click the label to focus the input."
+    },
+    {
+      "conceptId": "F064",
+      "conceptTitle": "Input type for password collection",
+      "category": "HTML Forms",
+      "question": "Which &lt;input&gt; type is used to collect the user's password, obscuring the text as it is typed?",
+      "options": [
+        { "label": "text", "isCorrect": false },
+        { "label": "secret", "isCorrect": false },
+        { "label": "password", "isCorrect": true },
+        { "label": "mask", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;password&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'password' type obscures the text and tells the browser to treat the input as a sensitive password field."
+    },
+    {
+      "conceptId": "F065",
+      "conceptTitle": "Attribute to make a form field mandatory",
+      "category": "HTML Forms",
+      "question": "What HTML5 attribute is used to make a form field mandatory for submission?",
+      "options": [
+        { "label": "mandatory", "isCorrect": false },
+        { "label": "required", "isCorrect": true },
+        { "label": "must-fill", "isCorrect": false },
+        { "label": "validate", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;text&quot; required&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The boolean attribute 'required' triggers client-side validation, preventing the form from submitting if the field is empty."
+    },
+    {
+      "conceptId": "F066",
+      "conceptTitle": "HTTP method to hide form data in URL",
+      "category": "HTML Forms",
+      "question": "Which HTTP method is used to send form data that should *not* be visible in the URL?",
+      "options": [
+        { "label": "GET", "isCorrect": false },
+        { "label": "POST", "isCorrect": true },
+        { "label": "SEND", "isCorrect": false },
+        { "label": "FETCH", "isCorrect": false }
+      ],
+      "codeExample": "&lt;form method=&quot;post&quot;&gt;...&lt;/form&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'POST' method sends data in the body of the HTTP request, making it suitable for sensitive data like passwords or large data payloads."
+    },
+    {
+      "conceptId": "F067",
+      "conceptTitle": "Default method for form submission",
+      "category": "HTML Forms",
+      "question": "What is the default method for submitting an HTML form if the 'method' attribute is omitted?",
+      "options": [
+        { "label": "POST", "isCorrect": false },
+        { "label": "GET", "isCorrect": true },
+        { "label": "PUT", "isCorrect": false },
+        { "label": "HEAD", "isCorrect": false }
+      ],
+      "codeExample": "&lt;form&gt; /* Defaults to GET */ &lt;/form&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The default method for a form is 'GET', which appends form data to the action URL as a query string."
+    },
+    {
+      "conceptId": "F068",
+      "conceptTitle": "Tag for multiline text input",
+      "category": "HTML Forms",
+      "question": "Which tag is used to create a multiline text input area?",
+      "options": [
+        { "label": "&lt;input type=&quot;textarea&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;text&gt;", "isCorrect": false },
+        { "label": "&lt;textarea&gt;", "isCorrect": true },
+        { "label": "&lt;input type=&quot;text-area&quot;&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;textarea rows=&quot;4&quot; cols=&quot;50&quot;&gt;...&lt;/textarea&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;textarea&gt; element is used for large text inputs, often including 'rows' and 'cols' attributes to define the visible size."
+    },
+    {
+      "conceptId": "F069",
+      "conceptTitle": "Allowing multiple options in a select list",
+      "category": "HTML Forms",
+      "question": "How do you allow a user to select multiple options from a &lt;select&gt; dropdown list?",
+      "options": [
+        { "label": "Use the 'multi-select' attribute", "isCorrect": false },
+        { "label": "Use the 'multiple' attribute on &lt;select&gt;", "isCorrect": true },
+        { "label": "Use multiple &lt;select&gt; elements", "isCorrect": false },
+        { "label": "Set 'type=\"checkbox\"' on the &lt;select&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;select multiple&gt;...&lt;/select&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The boolean attribute 'multiple' allows the user to select more than one option from the list, typically by holding down the Ctrl or Shift key."
+    },
+    {
+      "conceptId": "F070",
+      "conceptTitle": "Element to group related form fields",
+      "category": "HTML Forms",
+      "question": "Which form element is used to group related fields and often draws a border around them?",
+      "options": [
+        { "label": "&lt;group&gt;", "isCorrect": false },
+        { "label": "&lt;div&gt; with a class", "isCorrect": false },
+        { "label": "&lt;fieldset&gt;", "isCorrect": true },
+        { "label": "&lt;section&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;fieldset&gt;...&lt;/fieldset&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;fieldset&gt; element provides a structural grouping for form controls, which is important for both visual organization and accessibility."
+    },
+    {
+      "conceptId": "F071",
+      "conceptTitle": "Tag for a fieldset caption",
+      "category": "HTML Forms",
+      "question": "What tag provides a caption or title for a &lt;fieldset&gt;?",
+      "options": [
+        { "label": "&lt;caption&gt;", "isCorrect": false },
+        { "label": "&lt;legend&gt;", "isCorrect": true },
+        { "label": "&lt;header&gt;", "isCorrect": false },
+        { "label": "&lt;title&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;fieldset&gt;&lt;legend&gt;Personal Info&lt;/legend&gt;...&lt;/fieldset&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;legend&gt; element is used inside &lt;fieldset&gt; to provide a descriptive title for the group of controls."
+    },
+    {
+      "conceptId": "F072",
+      "conceptTitle": "Attribute for data submitted to the server",
+      "category": "HTML Forms",
+      "question": "Which attribute on an &lt;input&gt; is used to define the name of the data submitted to the server?",
+      "options": [
+        { "label": "id", "isCorrect": false },
+        { "label": "value", "isCorrect": false },
+        { "label": "name", "isCorrect": true },
+        { "label": "label", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'name' attribute is crucial as it creates the key-value pair ('name'='value') that is sent to the server when the form is submitted."
+    },
+    {
+      "conceptId": "F073",
+      "conceptTitle": "Purpose of the 'placeholder' attribute",
+      "category": "HTML Forms",
+      "question": "What is the purpose of the 'placeholder' attribute?",
+      "options": [
+        { "label": "Sets the default value of the input", "isCorrect": false },
+        { "label": "Provides a hint or example value that disappears on focus", "isCorrect": true },
+        { "label": "Defines the label for the input", "isCorrect": false },
+        { "label": "Specifies the required input pattern", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input placeholder=&quot;e.g., john@email.com&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'placeholder' provides non-required, temporary guidance to the user about what kind of information is expected in the field."
+    },
+    {
+      "conceptId": "F074",
+      "conceptTitle": "Preventing editing of an input field value",
+      "category": "HTML Forms",
+      "question": "Which attribute is used to prevent the user from editing the value of an input field, while still submitting the value with the form?",
+      "options": [
+        { "label": "disabled", "isCorrect": false },
+        { "label": "readonly", "isCorrect": true },
+        { "label": "locked", "isCorrect": false },
+        { "label": "static", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input value=&quot;Admin&quot; readonly&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'readonly' attribute allows the value to be seen and submitted, but not modified. A 'disabled' field is not submitted at all."
+    },
+    {
+      "conceptId": "F075",
+      "conceptTitle": "Correct input type for date and time picker",
+      "category": "HTML Forms",
+      "question": "What is the correct &lt;input&gt; type for a date and time picker without a timezone?",
+      "options": [
+        { "label": "datetime", "isCorrect": false },
+        { "label": "datetime-local", "isCorrect": true },
+        { "label": "date-time", "isCorrect": false },
+        { "label": "time-date", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;datetime-local&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'datetime-local' type displays a field for entering both a date and a time."
+    },
+    {
+      "conceptId": "F076",
+      "conceptTitle": "Attribute to receive focus on page load",
+      "category": "HTML Forms",
+      "question": "Which attribute allows an input field to receive focus immediately when the page loads?",
+      "options": [
+        { "label": "initial-focus", "isCorrect": false },
+        { "label": "autofocus", "isCorrect": true },
+        { "label": "onload-focus", "isCorrect": false },
+        { "label": "focus", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;text&quot; autofocus&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The boolean attribute 'autofocus' sets the cursor inside the field immediately upon the page loading."
+    },
+    {
+      "conceptId": "F077",
+      "conceptTitle": "Effect of 'novalidate' attribute",
+      "category": "HTML Forms",
+      "question": "What does the 'novalidate' attribute do when added to the &lt;form&gt; tag?",
+      "options": [
+        { "label": "Prevents data from being submitted", "isCorrect": false },
+        { "label": "Disables browser's automatic form validation", "isCorrect": true },
+        { "label": "Requires all fields to be submitted empty", "isCorrect": false },
+        { "label": "Sends the data to a non-validated URL", "isCorrect": false }
+      ],
+      "codeExample": "&lt;form novalidate&gt;...&lt;/form&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'novalidate' attribute allows you to use JavaScript for custom validation without the browser's built-in validation interfering."
+    },
+    {
+      "conceptId": "F078",
+      "conceptTitle": "Input type for toggle or on/off switch",
+      "category": "HTML Forms",
+      "question": "Which input type is generally used as a base for a toggle or on/off switch control?",
+      "options": [
+        { "label": "range", "isCorrect": false },
+        { "label": "checkbox", "isCorrect": true },
+        { "label": "toggle", "isCorrect": false },
+        { "label": "radio", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;checkbox&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "A checkbox is a binary control (on/off, true/false) and is typically styled with CSS to look like a modern switch."
+    },
+    {
+      "conceptId": "F079",
+      "conceptTitle": "Purpose of the 'pattern' attribute",
+      "category": "HTML Forms",
+      "question": "What is the purpose of the 'pattern' attribute on an &lt;input&gt;?",
+      "options": [
+        { "label": "Sets the placeholder value", "isCorrect": false },
+        { "label": "Specifies a regular expression for input validation", "isCorrect": true },
+        { "label": "Defines the CSS styles for the input", "isCorrect": false },
+        { "label": "Controls the input's maximum length", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input pattern=&quot;[0-9]{5}&quot; title=&quot;5 digits&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'pattern' attribute takes a JavaScript regular expression to enforce a specific format (e.g., a phone number, zip code) for the field's value."
+    },
+    {
+      "conceptId": "F080",
+      "conceptTitle": "Event handler for custom form validation",
+      "category": "HTML Forms",
+      "question": "Which event handler is commonly used on the &lt;form&gt; element to perform custom JavaScript validation *before* submission?",
+      "options": [
+        { "label": "onclick", "isCorrect": false },
+        { "label": "onchange", "isCorrect": false },
+        { "label": "onsubmit", "isCorrect": true },
+        { "label": "onvalidate", "isCorrect": false }
+      ],
+      "codeExample": "&lt;form onsubmit=&quot;return validateForm()&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'onsubmit' event fires when the form is about to be submitted. Returning 'false' from the handler will prevent the submission."
+    },
+    {
+      "conceptId": "F081",
+      "conceptTitle": "CSS pseudo-class for a filled input",
+      "category": "CSS Forms",
+      "question": "Which CSS pseudo-class targets an element that has been filled in with a value that passes the browser's validation rules?",
+      "options": [
+        { "label": ":focus", "isCorrect": false },
+        { "label": ":valid", "isCorrect": true },
+        { "label": ":required", "isCorrect": false },
+        { "label": ":filled", "isCorrect": false }
+      ],
+      "codeExample": "input:valid { border-color: green; }",
+      "visualConcept": "",
+      "answerExplanation": "The ':valid' pseudo-class selects form elements whose content is validated to be correct based on attributes like 'required', 'type', and 'pattern'."
+    },
+    {
+      "conceptId": "F082",
+      "conceptTitle": "Element defining a selectable option",
+      "category": "HTML Forms",
+      "question": "What element defines a selectable option within a &lt;select&gt; list?",
+      "options": [
+        { "label": "&lt;item&gt;", "isCorrect": false },
+        { "label": "&lt;option&gt;", "isCorrect": true },
+        { "label": "&lt;list-item&gt;", "isCorrect": false },
+        { "label": "&lt;li&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;select&gt;&lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;&lt;/select&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;option&gt; tag specifies an item that can be selected in a dropdown list or multi-select box."
+    },
+    {
+      "conceptId": "F083",
+      "conceptTitle": "Input type for color picker",
+      "category": "HTML Forms",
+      "question": "Which &lt;input&gt; type is used for a color picker?",
+      "options": [
+        { "label": "rgb", "isCorrect": false },
+        { "label": "hex", "isCorrect": false },
+        { "label": "color", "isCorrect": true },
+        { "label": "palette", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;color&quot; value=&quot;#ff0000&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'color' type provides the user with a color selection interface (a system-native color picker)."
+    },
+    {
+      "conceptId": "F084",
+      "conceptTitle": "Purpose of the 'autocomplete' attribute",
+      "category": "HTML Forms",
+      "question": "What is the purpose of the 'autocomplete' attribute?",
+      "options": [
+        { "label": "Defines the required fields", "isCorrect": false },
+        { "label": "Allows the browser to suggest and fill in the field based on previous input", "isCorrect": true },
+        { "label": "Sets the auto-focus property", "isCorrect": false },
+        { "label": "Disables form validation", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input autocomplete=&quot;email&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'autocomplete' attribute is a hint to the browser's autofill feature, helping it provide relevant suggestions (e.g., 'name', 'email', 'off')."
+    },
+    {
+      "conceptId": "F085",
+      "conceptTitle": "Tag for a simple reset button",
+      "category": "HTML Forms",
+      "question": "Which tag/type combination is used to create a simple reset button that clears the form data?",
+      "options": [
+        { "label": "&lt;input type=&quot;clear&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;button type=&quot;reset&quot;&gt;", "isCorrect": true },
+        { "label": "&lt;input type=&quot;clear-form&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;input type=&quot;button&quot;&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;button type=&quot;reset&quot;&gt;Clear&lt;/button&gt;",
+      "visualConcept": "",
+      "answerExplanation": "Setting the button or input type to 'reset' automatically reverts all form controls to their initial values without requiring JavaScript."
+    },
+    {
+      "conceptId": "F086",
+      "conceptTitle": "Purpose of the 'enctype' attribute",
+      "category": "HTML Forms",
+      "question": "What is the purpose of the 'enctype' attribute on a form?",
+      "options": [
+        { "label": "Specifies the form's character encoding", "isCorrect": false },
+        { "label": "Defines how the form data should be encoded, especially for file uploads", "isCorrect": true },
+        { "label": "Sets the form's HTTP method", "isCorrect": false },
+        { "label": "Enables form validation", "isCorrect": false }
+      ],
+      "codeExample": "&lt;form enctype=&quot;multipart/form-data&quot;&gt;...&lt;/form&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'enctype' (encoding type) attribute is necessary when a form includes a file input, which requires the encoding to be set to 'multipart/form-data'."
+    },
+    {
+      "conceptId": "F087",
+      "conceptTitle": "Input type to upload a file",
+      "category": "HTML Forms",
+      "question": "Which &lt;input&gt; type is used to allow a user to upload a file?",
+      "options": [
+        { "label": "upload", "isCorrect": false },
+        { "label": "data", "isCorrect": false },
+        { "label": "file", "isCorrect": true },
+        { "label": "blob", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;file&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'file' type provides a file selection dialog and requires the form's 'method' to be 'POST' and 'enctype' to be 'multipart/form-data'."
+    },
+    {
+      "conceptId": "F088",
+      "conceptTitle": "Defining min and max for number input",
+      "category": "HTML Forms",
+      "question": "How do you define a minimum and maximum value for a number or range &lt;input&gt;?",
+      "options": [
+        { "label": "Use the 'low' and 'high' attributes", "isCorrect": false },
+        { "label": "Use the 'min' and 'max' attributes", "isCorrect": true },
+        { "label": "Use the 'range' attribute", "isCorrect": false },
+        { "label": "Use the 'size' and 'limit' attributes", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'min' and 'max' attributes are used to enforce constraints on numeric and date-related input types."
+    },
+    {
+      "conceptId": "F089",
+      "conceptTitle": "Tag for pre-defined options for a text input",
+      "category": "HTML Forms",
+      "question": "What HTML tag is used to create a list of pre-defined options for a text &lt;input&gt; that the user can also type into?",
+      "options": [
+        { "label": "&lt;select&gt;", "isCorrect": false },
+        { "label": "&lt;datalist&gt;", "isCorrect": true },
+        { "label": "&lt;option-group&gt;", "isCorrect": false },
+        { "label": "&lt;options&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input list=&quot;browsers&quot;&gt;&lt;datalist id=&quot;browsers&quot;&gt;...&lt;/datalist&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;datalist&gt; element provides a list of options that can be suggested to the user as they type in an associated text &lt;input&gt; (linked by the 'list' attribute)."
+    },
+    {
+      "conceptId": "F090",
+      "conceptTitle": "Setting the initially selected option",
+      "category": "HTML Forms",
+      "question": "Which attribute is used to set the initially selected option in a &lt;select&gt; element?",
+      "options": [
+        { "label": "default", "isCorrect": false },
+        { "label": "selected on the desired &lt;option&gt;", "isCorrect": true },
+        { "label": "checked on the &lt;select&gt;", "isCorrect": false },
+        { "label": "pre-selected", "isCorrect": false }
+      ],
+      "codeExample": "&lt;option value=&quot;x&quot; selected&gt;Option X&lt;/option&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The boolean attribute 'selected' is applied to an individual &lt;option&gt; tag to mark it as the default choice when the page loads."
+    },
+    {
+      "conceptId": "R091",
+      "conceptTitle": "Critical viewport meta tag for responsiveness",
+      "category": "Responsive Design",
+      "question": "What is the critical &lt;meta&gt; tag required for modern responsive design?",
+      "options": [
+        { "label": "&lt;meta name=&quot;responsive&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;", "isCorrect": true },
+        { "label": "&lt;meta name=&quot;device-scale&quot; content=&quot;1&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;meta name=&quot;screen-size&quot;&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "This tag tells the browser to set the viewport width to the device's screen width and sets the initial zoom level to 1, ensuring elements scale correctly."
+    },
+    {
+      "conceptId": "R092",
+      "conceptTitle": "CSS technique for one-dimensional automatic layout",
+      "category": "Responsive Design",
+      "question": "Which CSS technique allows elements to align and distribute space automatically in one dimension (row or column)?",
+      "options": [
+        { "label": "Grid (&lt;display: grid&gt;)", "isCorrect": false },
+        { "label": "Flexbox (&lt;display: flex&gt;)", "isCorrect": true },
+        { "label": "Multi-column layout", "isCorrect": false },
+        { "label": "Positioning", "isCorrect": false }
+      ],
+      "codeExample": "div { display: flex; justify-content: space-between; }",
+      "visualConcept": "",
+      "answerExplanation": "Flexbox is designed for one-dimensional content layout, providing powerful tools for alignment and space distribution along a single axis."
+    },
+    {
+      "conceptId": "R093",
+      "conceptTitle": "CSS property for two-dimensional layout",
+      "category": "Responsive Design",
+      "question": "What CSS property is used to define the layout of columns and rows in a two-dimensional grid?",
+      "options": [
+        { "label": "display: flex", "isCorrect": false },
+        { "label": "display: grid", "isCorrect": true },
+        { "label": "display: table", "isCorrect": false },
+        { "label": "display: two-d", "isCorrect": false }
+      ],
+      "codeExample": "div { display: grid; grid-template-columns: 1fr 1fr; }",
+      "visualConcept": "",
+      "answerExplanation": "CSS Grid Layout allows you to define complex two-dimensional structures of rows and columns, making it ideal for overall page structure."
+    },
+    {
+      "conceptId": "R094",
+      "conceptTitle": "CSS unit that scales relative to the root element's font",
+      "category": "Responsive Design",
+      "question": "Which CSS unit scales relative to the font size of the root &lt;html&gt; element, aiding consistency and accessibility?",
+      "options": [
+        { "label": "px", "isCorrect": false },
+        { "label": "em", "isCorrect": false },
+        { "label": "rem", "isCorrect": true },
+        { "label": "vw", "isCorrect": false }
+      ],
+      "codeExample": "h1 { font-size: 2.5rem; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'rem' (root em) unit is preferred in responsive design because it simplifies scaling across the entire page based on a single root setting."
+    },
+    {
+      "conceptId": "R095",
+      "conceptTitle": "Primary purpose of a CSS @media query",
+      "category": "Responsive Design",
+      "question": "What is the primary purpose of a CSS @media query?",
+      "options": [
+        { "label": "To define custom variables", "isCorrect": false },
+        { "label": "To apply different styles based on device characteristics (e.g., screen width)", "isCorrect": true },
+        { "label": "To create animations", "isCorrect": false },
+        { "label": "To import external stylesheets", "isCorrect": false }
+      ],
+      "codeExample": "@media (max-width: 600px) { ... }",
+      "visualConcept": "",
+      "answerExplanation": "Media queries are the foundation of responsive design, allowing you to create 'breakpoints' where the layout changes to accommodate different screen sizes."
+    },
+    {
+      "conceptId": "R096",
+      "conceptTitle": "Targeting devices with 768px screen width or less",
+      "category": "Responsive Design",
+      "question": "How do you target devices with a screen width of 768px or less using a media query?",
+      "options": [
+        { "label": "@media (min-width: 768px) { ... }", "isCorrect": false },
+        { "label": "@media (max-width: 768px) { ... }", "isCorrect": true },
+        { "label": "@media (screen-width: 768px) { ... }", "isCorrect": false },
+        { "label": "@media screen and (768px) { ... }", "isCorrect": false }
+      ],
+      "codeExample": "@media (max-width: 768px) { body { padding: 5px; } }",
+      "visualConcept": "",
+      "answerExplanation": "'max-width' specifies that the styles inside the block should apply only when the viewport width is equal to or less than the specified value."
+    },
+    {
+      "conceptId": "R097",
+      "conceptTitle": "CSS to ensure images scale down without exceeding original size",
+      "category": "Responsive Design",
+      "question": "What CSS property combination ensures an &lt;img&gt; scales down within its container but doesn't exceed its original size?",
+      "options": [
+        { "label": "width: 100%; height: auto;", "isCorrect": false },
+        { "label": "max-width: 100%; height: auto;", "isCorrect": true },
+        { "label": "img-scale: 100%;", "isCorrect": false },
+        { "label": "overflow: hidden;", "isCorrect": false }
+      ],
+      "codeExample": "img { max-width: 100%; height: auto; }",
+      "visualConcept": "",
+      "answerExplanation": "'max-width: 100%' prevents the image from ever being wider than its container, while 'height: auto' ensures the aspect ratio is maintained as the width changes."
+    },
+    {
+      "conceptId": "R098",
+      "conceptTitle": "Flexbox property for main axis alignment",
+      "category": "Responsive Design",
+      "question": "Which Flexbox property controls the alignment of items along the main axis?",
+      "options": [
+        { "label": "align-items", "isCorrect": false },
+        { "label": "justify-content", "isCorrect": true },
+        { "label": "align-content", "isCorrect": false },
+        { "label": "flex-align", "isCorrect": false }
+      ],
+      "codeExample": "div { display: flex; justify-content: center; }",
+      "visualConcept": "",
+      "answerExplanation": "'justify-content' manages the spacing and alignment of items along the direction defined by 'flex-direction'."
+    },
+    {
+      "conceptId": "R099",
+      "conceptTitle": "Definition of 'Mobile First' in responsive design",
+      "category": "Responsive Design",
+      "question": "What does the term 'Mobile First' mean in responsive design?",
+      "options": [
+        { "label": "Using only phone-specific features", "isCorrect": false },
+        { "label": "Designing for the smallest screen size first, then progressively enhancing for larger screens", "isCorrect": true },
+        { "label": "Only using CSS for mobile views", "isCorrect": false },
+        { "label": "Designing the desktop view first and shrinking it down", "isCorrect": false }
+      ],
+      "codeExample": "/* CSS starts with no media query, then uses @media (min-width: X) */",
+      "visualConcept": "",
+      "answerExplanation": "Mobile First is a strategy where you design the core layout and styles for mobile devices first, then use 'min-width' media queries to add more complex features for larger devices."
+    },
+    {
+      "conceptId": "R100",
+      "conceptTitle": "CSS properties for media query screen size range",
+      "category": "Responsive Design",
+      "question": "Which CSS properties are used to define the minimum and maximum screen size for a media query?",
+      "options": [
+        { "label": "min-size and max-size", "isCorrect": false },
+        { "label": "min-width and max-width", "isCorrect": true },
+        { "label": "min-screen and max-screen", "isCorrect": false },
+        { "label": "width-min and width-max", "isCorrect": false }
+      ],
+      "codeExample": "@media (min-width: 768px) and (max-width: 1024px) { ... }",
+      "visualConcept": "",
+      "answerExplanation": "These two properties allow you to target a specific range of device widths, creating a dedicated 'breakpoint' for tablets or small desktops."
     }
   ]
 }
