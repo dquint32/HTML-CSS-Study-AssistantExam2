@@ -23,22 +23,65 @@ header {
   margin-top: 0;
 }
 
+/* --- Code Section Styles --- */
+.code-section {
+  margin-top: 1.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.code-section h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1em;
+  color: #555;
+}
+
 .code-block {
   background: #eee;
   padding: 0.5rem;
   font-family: monospace;
   white-space: pre-wrap;
   border-radius: 4px;
+  margin-bottom: 0.5rem; /* Space between HTML and CSS code blocks */
 }
 
+.code-block pre {
+  margin: 0; /* Remove default margin from <pre> */
+}
+
+/* --- Options/Question Styles (Review Mode) --- */
 .options label {
   display: block;
   margin: 0.5rem 0;
+  cursor: default;
+  padding: 0.25rem;
+  border-radius: 4px;
 }
 
+/* Highlight the correct answer for review */
+.options label.correct-option {
+  background-color: #e6ffed; /* Light green background */
+  font-weight: bold;
+}
+
+.answer-indicator {
+  margin-left: 5px;
+}
+
+/* --- Visual Concept Styles --- */
 .visual-concept {
   background: #e0f7fa;
   padding: 0.5rem;
   border-left: 4px solid #00796b;
   margin-top: 1rem;
+}
+
+/* --- Explanation Styles --- */
+.explanation {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f0f4f7;
+  border-left: 4px solid #0056b3;
+  border-radius: 4px;
 }
