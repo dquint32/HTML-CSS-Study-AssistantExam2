@@ -1,186 +1,207 @@
-/* Base Styles */
+/* =========================================
+   Base Styles (Existing)
+   ========================================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 1rem;
-    background: #f9f9f9;
+    background: #f4f7f9; /* Slightly darker background */
     color: #333;
 }
 
 header {
     text-align: center;
     margin-bottom: 2rem;
-    padding: 20px;
-    background: #00796b;
-    color: white;
-    border-radius: 8px;
-}
-
-header h1 {
-    margin-bottom: 5px;
-}
-
-header p {
-    margin: 0;
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 .card {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid #007bff; /* Primary color hint */
 }
 
 .concept-title {
-    color: #00796b;
-    border-bottom: 2px solid #e0f7fa;
-    padding-bottom: 10px;
+    color: #007bff;
     margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 }
 
 .category-tag {
-    color: #555;
     font-size: 0.9em;
-    margin-bottom: 1.5rem;
+    color: #6c757d;
+    margin-bottom: 15px;
 }
 
-/* Quiz Interactivity Styles */
-
+/* =========================================
+   Quiz Section Styles (New)
+   ========================================= */
 .quiz-section {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 15px;
+    padding: 15px 0;
+    border-bottom: 1px dashed #ddd;
 }
 
 .question-text {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .options {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .option-label {
-    display: block;
-    padding: 8px;
-    border-radius: 4px;
-    margin: 5px 0;
-    cursor: pointer;
-    transition: background-color 0.1s;
-}
-
-.option-label:hover {
-    background-color: #f0f0f0;
-}
-
-.option-text {
-    margin-left: 5px;
-}
-
-/* Hint & Explanation Sections */
-
-.hint-section, .explanation-section {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 4px;
-    background: #e0f7fa; /* Light teal background */
-}
-
-.explanation-section {
-    background: #fff3cd; /* Light warning yellow */
-    border: 1px solid #ffecb5;
-}
-
-.hint-content.hidden, .explanation-section.hidden {
-    display: none;
-}
-
-.toggle-hint-btn, .check-answer-btn {
-    padding: 10px 15px;
-    border: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border: 1px solid #dee2e6;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    margin-right: 10px;
     transition: background-color 0.2s;
 }
 
-.check-answer-btn {
-    background-color: #00796b;
+.option-label:hover {
+    background-color: #f8f9fa;
+}
+
+.option-text {
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+input[type="radio"] {
+    /* Hide default radio button to use custom styling/indicators */
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Styles for correct/incorrect visual feedback */
+.option-label.correct-choice {
+    background-color: #d4edda; /* Light green */
+    border-color: #155724;
+}
+
+.option-label.incorrect-choice {
+    background-color: #f8d7da; /* Light red */
+    border-color: #721c24;
+}
+
+/* Check Answer Button */
+.check-answer-btn, .toggle-hint-btn {
+    background-color: #007bff;
     color: white;
-    margin-top: 10px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    margin-right: 10px;
 }
 
-.check-answer-btn:hover {
-    background-color: #004d40;
+.check-answer-btn:hover, .toggle-hint-btn:hover {
+    background-color: #0056b3;
 }
 
-.toggle-hint-btn {
-    background-color: #f0f0f0;
-    color: #333;
-    margin-left: 15px;
-}
-
-.toggle-hint-btn:hover {
-    background-color: #e0e0e0;
-}
-
-/* Feedback Styling */
+/* Feedback Area */
 .feedback-area {
     margin-top: 15px;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 5px;
     font-weight: bold;
 }
 
 .feedback-area.correct {
-    background-color: #d4edda; /* Success/Correct Background */
-    color: #155724; /* Dark green text */
-    border: 1px solid #c3e6cb;
+    background-color: #d4edda; /* Light Green */
+    color: #155724; /* Dark Green */
 }
 
 .feedback-area.incorrect {
-    background-color: #f8d7da; /* Danger/Incorrect Background */
-    color: #721c24; /* Dark red text */
-    border: 1px solid #f5c6cb;
+    background-color: #f8d7da; /* Light Red */
+    color: #721c24; /* Dark Red */
 }
 
-/* Option Highlighting (Correct/Incorrect) */
-.option-label.correct-choice {
-    background-color: #d4edda;
-    border: 1px solid #155724;
+
+/* =========================================
+   Hint / Explanation Sections (New)
+   ========================================= */
+.hidden {
+    display: none;
 }
 
-.option-label.incorrect-choice {
-    background-color: #f8d7da;
-    border: 1px solid #721c24;
-}
-
-/* Code block cleanup (for the hint) */
-.code-block {
-    display: flex;
-    gap: 15px;
+.hint-section {
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px dashed #ccc;
+    border-top: 1px dashed #ddd;
 }
-.code-pair {
-    flex: 1;
+
+.hint-content, .explanation-section {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f0f7ff; /* Light blue/gray for content blocks */
+    border: 1px solid #cce5ff;
 }
-.code-pair h4 {
-    margin-top: 0;
-    color: #333;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-}
-.code-block pre {
-    background: #ffffff;
+
+/* Code Block Styling */
+.code-block {
+    background: #e9ecef;
     padding: 10px;
-    border-radius: 4px;
-    white-space: pre-wrap;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.code-block h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    font-size: 1.1em;
+    color: #343a40;
+}
+
+.code-pair h4 {
+    margin: 10px 0 5px 0;
+    font-size: 0.9em;
+    color: #007bff;
+}
+
+pre {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 3px;
     overflow-x: auto;
+    white-space: pre-wrap;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
     border: 1px solid #ddd;
+}
+
+.visual-concept {
+    background: #fff3cd; /* Light yellow for visual concept */
+    border-left: 5px solid #ffc107; /* Yellow border */
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.visual-concept h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #856404;
+}
+
+.analogy strong, .importance strong {
+    color: #333;
+}
+
+.explanation-section {
+    background: #e2f0d9; /* Light green/gray for explanation */
+    border: 1px solid #c3e6cb;
 }
