@@ -9,15 +9,15 @@ fetch('studyGuide/studyGuide.json')
       card.innerHTML = `
         <h2>${concept.conceptTitle}</h2>
         <p><strong>Category:</strong> ${concept.category}</p>
-        <p><strong>Question:</strong> ${concept.question}</p>
+        <p><strong>Question:</strong> ${concept.multipleChoiceQuestion.questionText}</p>
         <div class="options">
-          ${concept.options.map(opt => `
+          ${concept.multipleChoiceQuestion.options.map(opt => `
             <label>
               <input type="radio" name="${concept.conceptId}" />
-              ${opt.label}
+              ${opt.optionText}
             </label>
           `).join('')}
-        </div>
+        </div>        
         <div class="code-block">${concept.codeExample}</div>
         <div class="visual-concept">
           <strong>Visual Concept:</strong> ${concept.visualConcept}
@@ -31,5 +31,6 @@ fetch('studyGuide/studyGuide.json')
     document.getElementById('card-container').innerHTML = `<p>Error loading study guide.</p>`;
     console.error('Error:', error);
   });
+
 
 
