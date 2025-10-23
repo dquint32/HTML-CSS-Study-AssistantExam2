@@ -2,12 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('studyGuide.json')
         .then(response => {
             if (!response.ok) {
+                // This will catch HTTP errors like 404
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             return response.json();
         })
         .then(data => {
             const container = document.getElementById('card-container');
+            
+            // NOTE: data.studyGuide is now correct because we fixed the JSON key below.
             data.studyGuide.forEach(concept => {
                 const card = document.createElement('div');
                 card.className = 'card';
