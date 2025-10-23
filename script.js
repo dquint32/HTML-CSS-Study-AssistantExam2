@@ -1,5 +1,12 @@
 fetch('studyGuide.json')
-  .then(response => response.json())
+  .then(response => {
+    // 1. CHECK FOR NETWORK/HTTP ERRORS (e.g., 404 Not Found, 500 Server Error)
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status} (${response.statusText}). Check file path and case.`);
+    }
+    // 2. SAFELY PARSE JSON
+    return response.json();
+  })
   .then(data => {
     const container = document.getElementById('card-container');
     
@@ -8,6 +15,7 @@ fetch('studyGuide.json')
         throw new Error("JSON structure is missing the 'studyGuide' array.");
     }
 
+    // 3. RENDER CARDS
     data.studyGuide.forEach(concept => {
       const card = document.createElement('div');
       card.className = 'card';
@@ -67,6 +75,7 @@ fetch('studyGuide.json')
     });
   })
   .catch(error => {
-    document.getElementById('card-container').innerHTML = `<p>Error loading study guide. Check your JSON file and console for details.</p>`;
-    console.error('Error:', error);
+    // 4. DISPLAY DETAILED ERROR MESSAGE
+    document.getElementById('card-container').innerHTML = `<p>⚠️ Error loading study guide: ${error.message}. Please check your browser's console (F12) for more details.</p>`;
+    console.error('Fetch and Rendering Error:', error);
   });
