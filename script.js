@@ -21,7 +21,7 @@ fetch('studyGuide.json')
       const card = document.createElement('div');
       card.className = 'card';
       
-      // Destructure nested data for easier access
+      // DESTUCTURING: This is what fixes the problem by accessing the nested data
       const questionData = concept.multipleChoiceQuestion;
       const codeData = concept.codeExample;
       const visualData = concept.visualConcept;
