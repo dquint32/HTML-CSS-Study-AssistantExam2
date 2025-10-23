@@ -519,986 +519,986 @@
         { "label": "colgroup col { }", "isCorrect": true },
         { "label": "table columns { }", "isCorrect": false },
         { "label": "colgroup > col { }", "isCorrect": false },
-        { "label": "colgroup { }", "isCorrect": false }
+        { "label": "table-col { }", "isCorrect": false }
       ],
-      "codeExample": "colgroup col { background-color: lightblue; }",
+      "codeExample": "colgroup col { background-color: lightgray; }",
       "visualConcept": "",
-      "answerExplanation": "The descendant selector 'colgroup col' correctly targets all &lt;col&gt; elements that are inside a &lt;colgroup&gt; container."
+      "answerExplanation": "The 'colgroup col' selector targets every &lt;col&gt; element inside a &lt;colgroup&gt;, allowing bulk styling for all defined columns."
     },
     {
-      "conceptId": "C036",
-      "conceptTitle": "Spanning content across multiple columns in CSS",
-      "category": "CSS Columns",
-      "question": "What is the correct way to span content across multiple columns in CSS?",
-      "options": [
-        { "label": "grid-column: span n", "isCorrect": false },
-        { "label": "column-span: all", "isCorrect": true },
-        { "label": "span-column: true", "isCorrect": false },
-        { "label": "multi-col-span: n", "isCorrect": false }
-      ],
-      "codeExample": "h1 { column-span: all; }",
-      "visualConcept": "",
-      "answerExplanation": "The 'column-span: all' property is applied to a child element within a multi-column container to make it span across all columns."
-    },
-    {
-      "conceptId": "C037",
-      "conceptTitle": "Effect of setting column-count to 3",
-      "category": "CSS Columns",
-      "question": "What happens if you set column-count to 3?",
-      "options": [
-        { "label": "Content flows into 3 columns", "isCorrect": true },
-        { "label": "3 tables created", "isCorrect": false },
-        { "label": "Rows divide by 3", "isCorrect": false },
-        { "label": "Columns hidden", "isCorrect": false }
-      ],
-      "codeExample": "div { column-count: 3; }",
-      "visualConcept": "",
-      "answerExplanation": "The 'column-count' property dictates that the element's content should be evenly distributed into the specified number of columns (3, in this case)."
-    },
-    {
-      "conceptId": "R038",
-      "conceptTitle": "How row/column groups improve table semantics",
-      "category": "Responsive Design",
-      "question": "How do row and column groups improve table semantics?",
-      "options": [
-        { "label": "Define logical groups aiding accessibility and styles", "isCorrect": true },
-        { "label": "Improve table width", "isCorrect": false },
-        { "label": "Add color", "isCorrect": false },
-        { "label": "None", "isCorrect": false }
-      ],
-      "codeExample": "/* &lt;thead&gt;, &lt;tbody&gt;, &lt;colgroup&gt; */",
-      "visualConcept": "",
-      "answerExplanation": "Grouping tags like &lt;thead&gt; and &lt;colgroup&gt; provide structure that screen readers and other tools can use to understand the table's logical components."
-    },
-    {
-      "conceptId": "C039",
-      "conceptTitle": "Controlling break behavior in multicolumn layouts",
-      "category": "CSS Columns",
-      "question": "What CSS property can you use to control break behavior in multicolumn layouts?",
-      "options": [
-        { "label": "break-inside", "isCorrect": true },
-        { "label": "column-break", "isCorrect": false },
-        { "label": "row-break", "isCorrect": false },
-        { "label": "break-column", "isCorrect": false }
-      ],
-      "codeExample": "p { break-inside: avoid; }",
-      "visualConcept": "",
-      "answerExplanation": "The 'break-inside: avoid' property, when applied to a child element, prevents a column break from occurring *inside* that element."
-    },
-    {
-      "conceptId": "T040",
-      "conceptTitle": "Tag for grouping body rows in a table",
-      "category": "HTML Tables",
-      "question": "Which tag is used to group body rows in a table?",
-      "options": [
-        { "label": "&lt;tbody&gt;", "isCorrect": true },
-        { "label": "&lt;thead&gt;", "isCorrect": false },
-        { "label": "&lt;tfoot&gt;", "isCorrect": false },
-        { "label": "&lt;colgroup&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;tbody&gt;\n  &lt;tr&gt;...&lt;/tr&gt;\n  &lt;tr&gt;...&lt;/tr&gt;\n&lt;/tbody&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The &lt;tbody&gt; element groups the main, functional rows of data in a table."
-    },
-    {
-      "conceptId": "C041",
-      "conceptTitle": "Separating content vertically in CSS multi-column layouts",
-      "category": "CSS Columns",
-      "question": "Tabs that help separate content vertically in CSS multi-column layouts use:",
-      "options": [
-        { "label": "column-gap", "isCorrect": true },
-        { "label": "padding", "isCorrect": false },
-        { "label": "margin", "isCorrect": false },
-        { "label": "column-pad", "isCorrect": false }
-      ],
-      "codeExample": "div { column-gap: 20px; }",
-      "visualConcept": "",
-      "answerExplanation": "The space between columns (the gutter) is controlled using the 'column-gap' property."
-    },
-    {
-      "conceptId": "T042",
-      "conceptTitle": "Element for footer rows in a table",
-      "category": "HTML Tables",
-      "question": "What should be used for the footer rows in a table?",
-      "options": [
-        { "label": "&lt;tfoot&gt;", "isCorrect": true },
-        { "label": "&lt;tbody&gt;", "isCorrect": false },
-        { "label": "&lt;tfootgroup&gt;", "isCorrect": false },
-        { "label": "&lt;tfootrow&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;tfoot&gt;\n  &lt;tr&gt;...&lt;/tr&gt;\n&lt;/tfoot&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The &lt;tfoot&gt; element semantically groups the rows designated as the table footer."
-    },
-    {
-      "conceptId": "T043",
-      "conceptTitle": "Element describing a single data cell",
-      "category": "HTML Tables",
-      "question": "Which element describes a single data cell in a table?",
-      "options": [
-        { "label": "&lt;td&gt;", "isCorrect": true },
-        { "label": "&lt;tr&gt;", "isCorrect": false },
-        { "label": "&lt;th&gt;", "isCorrect": false },
-        { "label": "&lt;table&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;td&gt;Cell Data&lt;/td&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The &lt;td&gt; element represents a single data cell within a row."
-    },
-    {
-      "conceptId": "T044",
-      "conceptTitle": "Vertically aligning content in a table cell",
+      "conceptId": "T036",
+      "conceptTitle": "Setting a fixed table layout mode",
       "category": "CSS Tables",
-      "question": "How would you vertically align content in a table cell?",
+      "question": "Which property sets the table to use a fixed layout algorithm?",
       "options": [
-        { "label": "vertical-align CSS property", "isCorrect": true },
-        { "label": "align-content", "isCorrect": false },
-        { "label": "justify-content", "isCorrect": false },
-        { "label": "text-align", "isCorrect": false }
-      ],
-      "codeExample": "td { vertical-align: middle; }",
-      "visualConcept": "",
-      "answerExplanation": "The 'vertical-align' property is specifically used for vertical alignment of content inside table cells (&lt;td&gt; or &lt;th&gt;)."
-    },
-    {
-      "conceptId": "T045",
-      "conceptTitle": "Applying styles to specific rows",
-      "category": "CSS Tables",
-      "question": "To apply styles to specific rows, use:",
-      "options": [
-        { "label": "nth-child selectors on &lt;tr&gt;", "isCorrect": true },
-        { "label": "nth-child selectors on &lt;td&gt;", "isCorrect": false },
-        { "label": "Classes on &lt;tbody&gt;", "isCorrect": false },
-        { "label": "pseudo classes on &lt;tbody&gt;", "isCorrect": false }
-      ],
-      "codeExample": "tr:nth-child(5) { background: yellow; }",
-      "visualConcept": "",
-      "answerExplanation": "The ':nth-child(n)' pseudo-class is the standard way to target a row based on its position within its parent container."
-    },
-    {
-      "conceptId": "T046",
-      "conceptTitle": "Including an accessible table caption",
-      "category": "HTML Tables",
-      "question": "How do you include a table caption that is accessible?",
-      "options": [
-        { "label": "Use the &lt;caption&gt; tag inside &lt;table&gt; with descriptive text", "isCorrect": true },
-        { "label": "Use aria-label only", "isCorrect": false },
-        { "label": "Provide alt text", "isCorrect": false },
-        { "label": "Use &lt;header&gt; inside table", "isCorrect": false }
-      ],
-      "codeExample": "&lt;table&gt;&lt;caption&gt;...&lt;/caption&gt;...&lt;/table&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The &lt;caption&gt; element is built specifically for this purpose and is easily consumed by accessibility tools."
-    },
-    {
-      "conceptId": "T047",
-      "conceptTitle": "Making a table header row sticky",
-      "category": "CSS Tables",
-      "question": "How to make a table header row sticky during scrolling?",
-      "options": [
-        { "label": "CSS position: sticky on &lt;thead&gt;", "isCorrect": true },
-        { "label": "CSS float: fixed on &lt;thead&gt;", "isCorrect": false },
-        { "label": "Use JavaScript only", "isCorrect": false },
-        { "label": "Set height on &lt;thead&gt;", "isCorrect": false }
-      ],
-      "codeExample": "thead { position: sticky; top: 0; background: white; }",
-      "visualConcept": "",
-      "answerExplanation": "The 'position: sticky' property, combined with 'top: 0', is the modern CSS solution for making the header row remain visible while the table body scrolls."
-    },
-    {
-      "conceptId": "T048",
-      "conceptTitle": "Attribute to span a cell horizontally",
-      "category": "HTML Tables",
-      "question": "What attribute is required to span a cell horizontally?",
-      "options": [
-        { "label": "colspan", "isCorrect": true },
-        { "label": "rowspan", "isCorrect": false },
-        { "label": "spancol", "isCorrect": false },
-        { "label": "spanrow", "isCorrect": false }
-      ],
-      "codeExample": "&lt;td colspan=&quot;4&quot;&gt;...&lt;/td&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The 'colspan' attribute merges a cell across multiple columns (horizontally)."
-    },
-    {
-      "conceptId": "T049",
-      "conceptTitle": "Tag grouping content in table footer",
-      "category": "HTML Tables",
-      "question": "Which tag groups content in table footer?",
-      "options": [
-        { "label": "&lt;tfoot&gt;", "isCorrect": true },
-        { "label": "&lt;tbody&gt;", "isCorrect": false },
-        { "label": "&lt;tfootgroup&gt;", "isCorrect": false },
-        { "label": "&lt;tfootrow&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;tfoot&gt;\n  &lt;tr&gt;...&lt;/tr&gt;\n&lt;/tfoot&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The &lt;tfoot&gt; element is the designated tag for semantic grouping of footer content."
-    },
-    {
-      "conceptId": "R050",
-      "conceptTitle": "Recommended accessibility use for tables",
-      "category": "Responsive Design",
-      "question": "When designing tables for accessibility, which use is recommended?",
-      "options": [
-        { "label": "Use semantic tags like &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;, &lt;caption&gt;", "isCorrect": true },
-        { "label": "Use divs instead of tables", "isCorrect": false },
-        { "label": "Use tables only for layout", "isCorrect": false },
-        { "label": "Remove captions", "isCorrect": false }
-      ],
-      "codeExample": "/* Consistent use of grouping tags */",
-      "visualConcept": "",
-      "answerExplanation": "Semantic tags provide screen readers with the necessary context to understand the table's structure and the relationship between header and data cells."
-    },
-    {
-      "conceptId": "T051",
-      "conceptTitle": "Creating a multi-row header cell",
-      "category": "HTML Tables",
-      "question": "What HTML tag attribute is used to create a header cell that spans multiple rows?",
-      "options": [
-        { "label": "colspan", "isCorrect": false },
-        { "label": "rowspan", "isCorrect": true },
-        { "label": "spanrows", "isCorrect": false },
-        { "label": "row-span", "isCorrect": false }
-      ],
-      "codeExample": "&lt;th rowspan=&quot;2&quot;&gt;Category&lt;/th&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The 'rowspan' attribute is used on a &lt;th&gt; element to make it span vertically across the specified number of rows."
-    },
-    {
-      "conceptId": "T052",
-      "conceptTitle": "Optional but recommended table row grouping tag",
-      "category": "HTML Tables",
-      "question": "Which table row grouping tag is *optional* but recommended for semantic completeness?",
-      "options": [
-        { "label": "&lt;tr&gt;", "isCorrect": false },
-        { "label": "&lt;tbody&gt;", "isCorrect": true },
-        { "label": "&lt;td&gt;", "isCorrect": false },
-        { "label": "&lt;table&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;tbody&gt;&lt;tr&gt;...&lt;/tr&gt;&lt;/tbody&gt;",
-      "visualConcept": "",
-      "answerExplanation": "If omitted, the browser automatically infers and wraps the data rows in &lt;tbody&gt;. Explicitly including it is a best practice."
-    },
-    {
-      "conceptId": "T053",
-      "conceptTitle": "Purpose of the scope attribute on th",
-      "category": "HTML Tables",
-      "question": "What is the primary purpose of the 'scope' attribute on the &lt;th&gt; element?",
-      "options": [
-        { "label": "Defines the cell's background color", "isCorrect": false },
-        { "label": "Defines whether the header applies to a row or a column", "isCorrect": true },
-        { "label": "Sets the column width", "isCorrect": false },
-        { "label": "Indicates the cell's accessibility role", "isCorrect": false }
-      ],
-      "codeExample": "&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The 'scope' attribute (with values like 'col' or 'row') explicitly tells assistive technologies what data the header cell relates to."
-    },
-    {
-      "conceptId": "T054",
-      "conceptTitle": "CSS equivalent to deprecated cellpadding",
-      "category": "CSS Tables",
-      "question": "Which CSS property is the modern equivalent to the deprecated HTML 'cellpadding' attribute?",
-      "options": [
-        { "label": "border-spacing", "isCorrect": false },
-        { "label": "cell-padding", "isCorrect": false },
-        { "label": "padding applied to &lt;td&gt; and &lt;th&gt;", "isCorrect": true },
-        { "label": "margin applied to &lt;td&gt;", "isCorrect": false }
-      ],
-      "codeExample": "td, th { padding: 10px; }",
-      "visualConcept": "",
-      "answerExplanation": "Cell padding is the space between the cell content and its border, which is controlled in CSS using the 'padding' property on the &lt;td&gt; and &lt;th&gt; elements."
-    },
-    {
-      "conceptId": "T055",
-      "conceptTitle": "Controlling table caption side",
-      "category": "CSS Tables",
-      "question": "Which CSS property is used to place the &lt;caption&gt; on the bottom of the table?",
-      "options": [
-        { "label": "caption-align: bottom", "isCorrect": false },
-        { "label": "caption-side: bottom", "isCorrect": true },
-        { "label": "text-align: bottom", "isCorrect": false },
-        { "label": "caption-position: below", "isCorrect": false }
-      ],
-      "codeExample": "table { caption-side: bottom; }",
-      "visualConcept": "",
-      "answerExplanation": "The 'caption-side' property controls whether the &lt;caption&gt; is placed above ('top', the default) or below ('bottom') the table."
-    },
-    {
-      "conceptId": "T056",
-      "conceptTitle": "CSS property for fixed table layout",
-      "category": "CSS Tables",
-      "question": "Which CSS property allows you to define a fixed table layout, where column widths are determined by the first row?",
-      "options": [
-        { "label": "table-style: fixed", "isCorrect": false },
         { "label": "table-layout: fixed", "isCorrect": true },
-        { "label": "column-layout: fixed", "isCorrect": false },
-        { "label": "width: fixed", "isCorrect": false }
+        { "label": "table-style: fixed", "isCorrect": false },
+        { "label": "width: fixed", "isCorrect": false },
+        { "label": "display: table-fixed", "isCorrect": false }
       ],
       "codeExample": "table { table-layout: fixed; }",
       "visualConcept": "",
-      "answerExplanation": "When 'table-layout: fixed' is used, the browser can render the table much faster because it does not have to read all content before determining column widths."
+      "answerExplanation": "The 'table-layout: fixed' property makes rendering faster as the browser can determine column widths without having to analyze all the content of the cells."
     },
     {
-      "conceptId": "T057",
-      "conceptTitle": "Semantic structure order for a table",
-      "category": "HTML Tables",
-      "question": "What is the correct semantic structure order for a table with all grouping elements?",
-      "options": [
-        { "label": "&lt;caption&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;", "isCorrect": false },
-        { "label": "&lt;caption&gt;, &lt;colgroup&gt;, &lt;thead&gt;, &lt;tfoot&gt;, &lt;tbody&gt;", "isCorrect": true },
-        { "label": "&lt;thead&gt;, &lt;tfoot&gt;, &lt;caption&gt;, &lt;tbody&gt;", "isCorrect": false },
-        { "label": "&lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;table&gt;...&lt;/table&gt;",
-      "visualConcept": "",
-      "answerExplanation": "Inside &lt;table&gt;, the order is: &lt;caption&gt; (optional), &lt;colgroup&gt; (optional), then the row-grouping elements: &lt;thead&gt;, &lt;tfoot&gt;, and finally &lt;tbody&gt;."
-    },
-    {
-      "conceptId": "T058",
-      "conceptTitle": "Table section for aggregate data",
-      "category": "HTML Tables",
-      "question": "In which section of a table should aggregate data or summary statistics typically be placed?",
-      "options": [
-        { "label": "&lt;thead&gt;", "isCorrect": false },
-        { "label": "&lt;tfoot&gt;", "isCorrect": true },
-        { "label": "&lt;summary&gt;", "isCorrect": false },
-        { "label": "The last row of &lt;tbody&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Grand Total&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The &lt;tfoot&gt; element is semantically intended for summary or footer information related to the table data."
-    },
-    {
-      "conceptId": "T059",
-      "conceptTitle": "Browser behavior when &lt;tbody&gt; is omitted",
-      "category": "HTML Tables",
-      "question": "What happens if you omit &lt;tbody&gt; but include &lt;tr&gt; and &lt;td&gt; inside &lt;table&gt;?",
-      "options": [
-        { "label": "The table will not render.", "isCorrect": false },
-        { "label": "The rows are automatically wrapped in an inferred &lt;tbody&gt;.", "isCorrect": true },
-        { "label": "The rows are placed inside &lt;thead&gt;.", "isCorrect": false },
-        { "label": "The table uses 'display: block' instead of 'display: table'.", "isCorrect": false }
-      ],
-      "codeExample": "&lt;table&gt;&lt;tr&gt;...&lt;/tr&gt;&lt;/table&gt;",
-      "visualConcept": "",
-      "answerExplanation": "Modern browsers automatically correct this common omission by wrapping the &lt;tr&gt; elements in a generated &lt;tbody&gt; element."
-    },
-    {
-      "conceptId": "T060",
-      "conceptTitle": "The 'border' attribute CSS replacement",
+      "conceptId": "T037",
+      "conceptTitle": "Hiding text that overflows a cell",
       "category": "CSS Tables",
-      "question": "The deprecated 'border' attribute on the &lt;table&gt; tag is best replaced by which CSS property?",
+      "question": "How can you hide text that overflows the cell's boundaries?",
       "options": [
-        { "label": "table-border", "isCorrect": false },
-        { "label": "border applied to &lt;table&gt;, &lt;th&gt;, and &lt;td&gt;", "isCorrect": true },
-        { "label": "outline", "isCorrect": false },
-        { "label": "border-width", "isCorrect": false }
+        { "label": "overflow: hidden", "isCorrect": true },
+        { "label": "white-space: nowrap", "isCorrect": false },
+        { "label": "text-overflow: clip", "isCorrect": false },
+        { "label": "visibility: hidden", "isCorrect": false }
       ],
-      "codeExample": "table, th, td { border: 1px solid black; }",
+      "codeExample": "td { overflow: hidden; white-space: nowrap; }",
       "visualConcept": "",
-      "answerExplanation": "To fully replicate the old 'border' attribute, you must apply the 'border' property to the table, header cells, and data cells, typically combined with 'border-collapse: collapse'."
+      "answerExplanation": "Applying 'overflow: hidden' to the &lt;td&gt; element will hide any content that extends beyond the cell's padding and border."
     },
     {
-      "conceptId": "F061",
-      "conceptTitle": "Element for creating a submit button",
-      "category": "HTML Forms",
-      "question": "Which element is commonly used to create a submit button that can contain content like images?",
+      "conceptId": "T038",
+      "conceptTitle": "Adding inner space to table cells",
+      "category": "CSS Tables",
+      "question": "What CSS property adds inner space between the content and the cell border?",
       "options": [
-        { "label": "&lt;input type=&quot;submit&quot;&gt;", "isCorrect": false },
-        { "label": "&lt;button type=&quot;submit&quot;&gt;", "isCorrect": true },
-        { "label": "&lt;a role=&quot;button&quot;&gt;", "isCorrect": false },
-        { "label": "&lt;span class=&quot;submit&quot;&gt;", "isCorrect": false }
+        { "label": "margin", "isCorrect": false },
+        { "label": "padding", "isCorrect": true },
+        { "label": "cell-padding", "isCorrect": false },
+        { "label": "border-spacing", "isCorrect": false }
       ],
-      "codeExample": "&lt;button type=&quot;submit&quot;&gt;Send Data&lt;/button&gt;",
+      "codeExample": "th, td { padding: 8px; }",
       "visualConcept": "",
-      "answerExplanation": "The &lt;button&gt; tag is preferred over &lt;input type=\"submit\"&gt; because it allows you to place rich content (HTML) inside the button."
+      "answerExplanation": "The 'padding' property applies to &lt;td&gt; and &lt;th&gt; elements and adds space inside the cell boundary, pushing the content away from the border."
     },
     {
-      "conceptId": "F062",
-      "conceptTitle": "Purpose of the 'action' attribute",
-      "category": "HTML Forms",
-      "question": "What is the primary purpose of the 'action' attribute on the &lt;form&gt; element?",
+      "conceptId": "T039",
+      "conceptTitle": "Accessibility attribute for complex headers",
+      "category": "HTML Tables",
+      "question": "Which attribute is best for associating data cells with their headers in complex tables?",
       "options": [
-        { "label": "Defines the form's name", "isCorrect": false },
-        { "label": "Specifies the URL to send the form data to upon submission", "isCorrect": true },
-        { "label": "Sets the HTTP method (GET or POST)", "isCorrect": false },
-        { "label": "Determines if the form should be validated", "isCorrect": false }
+        { "label": "scope", "isCorrect": false },
+        { "label": "id and headers", "isCorrect": true },
+        { "label": "title", "isCorrect": false },
+        { "label": "aria-label", "isCorrect": false }
       ],
-      "codeExample": "&lt;form action=&quot;/process.php&quot;&gt;...&lt;/form&gt;",
+      "codeExample": "&lt;th id=&quot;c1&quot;&gt;Header&lt;/th&gt;\n&lt;td headers=&quot;c1&quot;&gt;Data&lt;/td&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'action' attribute tells the browser where to send the collected form data."
+      "answerExplanation": "For simple tables, 'scope' on &lt;th&gt; works. For complex tables with merged cells, using the 'id' attribute on &lt;th&gt; and the 'headers' attribute on &lt;td&gt; is the most robust accessibility method."
     },
     {
-      "conceptId": "F063",
-      "conceptTitle": "Associating a form field with its label",
-      "category": "HTML Forms",
-      "question": "Which attribute is crucial for associating a form field with its &lt;label&gt; for accessibility?",
+      "conceptId": "T040",
+      "conceptTitle": "Default text alignment for &lt;th&gt;",
+      "category": "CSS Tables",
+      "question": "What is the default text alignment for content inside a &lt;th&gt; element?",
       "options": [
-        { "label": "The 'name' attribute on both", "isCorrect": false },
-        { "label": "The 'for' attribute on &lt;label&gt; matching the 'id' of the input", "isCorrect": true },
-        { "label": "The 'value' attribute on both", "isCorrect": false },
-        { "label": "The 'type' attribute on the input", "isCorrect": false }
+        { "label": "left", "isCorrect": false },
+        { "label": "right", "isCorrect": false },
+        { "label": "center", "isCorrect": true },
+        { "label": "justify", "isCorrect": false }
       ],
-      "codeExample": "&lt;label for=&quot;user&quot;&gt;User&lt;/label&gt;&lt;input id=&quot;user&quot;&gt;",
+      "codeExample": "/* Default is text-align: center; */",
       "visualConcept": "",
-      "answerExplanation": "The 'for' attribute on &lt;label&gt; must match the 'id' attribute of the related form control. This allows users to click the label to focus the input."
+      "answerExplanation": "By default, browser stylesheets align the text content of &lt;th&gt; (table header) elements to the center."
     },
     {
-      "conceptId": "F064",
-      "conceptTitle": "Input type for password collection",
+      "conceptId": "F041",
+      "conceptTitle": "HTML element for creating a form",
       "category": "HTML Forms",
-      "question": "Which &lt;input&gt; type is used to collect the user's password, obscuring the text as it is typed?",
+      "question": "Which HTML element is used to create a form?",
       "options": [
-        { "label": "text", "isCorrect": false },
-        { "label": "secret", "isCorrect": false },
-        { "label": "password", "isCorrect": true },
-        { "label": "mask", "isCorrect": false }
+        { "label": "&lt;input&gt;", "isCorrect": false },
+        { "label": "&lt;form&gt;", "isCorrect": true },
+        { "label": "&lt;label&gt;", "isCorrect": false },
+        { "label": "&lt;section&gt;", "isCorrect": false }
       ],
-      "codeExample": "&lt;input type=&quot;password&quot;&gt;",
+      "codeExample": "&lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;\n  &lt;!-- inputs go here --&gt;\n&lt;/form&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'password' type obscures the text and tells the browser to treat the input as a sensitive password field."
+      "answerExplanation": "The &lt;form&gt; element is the container that collects user input and defines how that data should be processed (via the 'action' and 'method' attributes)."
     },
     {
-      "conceptId": "F065",
-      "conceptTitle": "Attribute to make a form field mandatory",
+      "conceptId": "F042",
+      "conceptTitle": "Attribute to send form data",
       "category": "HTML Forms",
-      "question": "What HTML5 attribute is used to make a form field mandatory for submission?",
+      "question": "Which attribute of the &lt;form&gt; tag specifies where to send the form data?",
       "options": [
-        { "label": "mandatory", "isCorrect": false },
-        { "label": "required", "isCorrect": true },
-        { "label": "must-fill", "isCorrect": false },
-        { "label": "validate", "isCorrect": false }
+        { "label": "method", "isCorrect": false },
+        { "label": "action", "isCorrect": true },
+        { "label": "target", "isCorrect": false },
+        { "label": "send", "isCorrect": false }
       ],
-      "codeExample": "&lt;input type=&quot;text&quot; required&gt;",
+      "codeExample": "&lt;form action=&quot;/profile.php&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The boolean attribute 'required' triggers client-side validation, preventing the form from submitting if the field is empty."
+      "answerExplanation": "The 'action' attribute specifies the URL or path of the script on the server that will handle the submitted form data."
     },
     {
-      "conceptId": "F066",
-      "conceptTitle": "HTTP method to hide form data in URL",
+      "conceptId": "F043",
+      "conceptTitle": "HTTP method for retrieving data",
       "category": "HTML Forms",
-      "question": "Which HTTP method is used to send form data that should *not* be visible in the URL?",
-      "options": [
-        { "label": "GET", "isCorrect": false },
-        { "label": "POST", "isCorrect": true },
-        { "label": "SEND", "isCorrect": false },
-        { "label": "FETCH", "isCorrect": false }
-      ],
-      "codeExample": "&lt;form method=&quot;post&quot;&gt;...&lt;/form&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The 'POST' method sends data in the body of the HTTP request, making it suitable for sensitive data like passwords or large data payloads."
-    },
-    {
-      "conceptId": "F067",
-      "conceptTitle": "Default method for form submission",
-      "category": "HTML Forms",
-      "question": "What is the default method for submitting an HTML form if the 'method' attribute is omitted?",
+      "question": "Which HTTP method should be used when the form is meant to retrieve or search for data?",
       "options": [
         { "label": "POST", "isCorrect": false },
         { "label": "GET", "isCorrect": true },
         { "label": "PUT", "isCorrect": false },
-        { "label": "HEAD", "isCorrect": false }
+        { "label": "SEND", "isCorrect": false }
       ],
-      "codeExample": "&lt;form&gt; /* Defaults to GET */ &lt;/form&gt;",
+      "codeExample": "&lt;form method=&quot;GET&quot; action=&quot;/search&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The default method for a form is 'GET', which appends form data to the action URL as a query string."
+      "answerExplanation": "The 'GET' method appends form data to the URL (visible in the address bar) and is used for non-sensitive data retrieval, like search queries."
     },
     {
-      "conceptId": "F068",
-      "conceptTitle": "Tag for multiline text input",
+      "conceptId": "F044",
+      "conceptTitle": "HTTP method for sensitive data",
       "category": "HTML Forms",
-      "question": "Which tag is used to create a multiline text input area?",
+      "question": "Which HTTP method should be used for submitting sensitive data (like passwords or large file uploads)?",
       "options": [
-        { "label": "&lt;input type=&quot;textarea&quot;&gt;", "isCorrect": false },
+        { "label": "GET", "isCorrect": false },
+        { "label": "POST", "isCorrect": true },
+        { "label": "PUT", "isCorrect": false },
+        { "label": "FETCH", "isCorrect": false }
+      ],
+      "codeExample": "&lt;form method=&quot;POST&quot; action=&quot;/login&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'POST' method sends form data inside the body of the HTTP request, which is not visible in the URL and is therefore more secure and suitable for large amounts of data."
+    },
+    {
+      "conceptId": "F045",
+      "conceptTitle": "Element for text input fields",
+      "category": "HTML Forms",
+      "question": "Which element is used to create a standard single-line text input field?",
+      "options": [
+        { "label": "&lt;textarea&gt;", "isCorrect": false },
         { "label": "&lt;text&gt;", "isCorrect": false },
-        { "label": "&lt;textarea&gt;", "isCorrect": true },
-        { "label": "&lt;input type=&quot;text-area&quot;&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;textarea rows=&quot;4&quot; cols=&quot;50&quot;&gt;...&lt;/textarea&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The &lt;textarea&gt; element is used for large text inputs, often including 'rows' and 'cols' attributes to define the visible size."
-    },
-    {
-      "conceptId": "F069",
-      "conceptTitle": "Allowing multiple options in a select list",
-      "category": "HTML Forms",
-      "question": "How do you allow a user to select multiple options from a &lt;select&gt; dropdown list?",
-      "options": [
-        { "label": "Use the 'multi-select' attribute", "isCorrect": false },
-        { "label": "Use the 'multiple' attribute on &lt;select&gt;", "isCorrect": true },
-        { "label": "Use multiple &lt;select&gt; elements", "isCorrect": false },
-        { "label": "Set 'type=\"checkbox\"' on the &lt;select&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;select multiple&gt;...&lt;/select&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The boolean attribute 'multiple' allows the user to select more than one option from the list, typically by holding down the Ctrl or Shift key."
-    },
-    {
-      "conceptId": "F070",
-      "conceptTitle": "Element to group related form fields",
-      "category": "HTML Forms",
-      "question": "Which form element is used to group related fields and often draws a border around them?",
-      "options": [
-        { "label": "&lt;group&gt;", "isCorrect": false },
-        { "label": "&lt;div&gt; with a class", "isCorrect": false },
-        { "label": "&lt;fieldset&gt;", "isCorrect": true },
-        { "label": "&lt;section&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;fieldset&gt;...&lt;/fieldset&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The &lt;fieldset&gt; element provides a structural grouping for form controls, which is important for both visual organization and accessibility."
-    },
-    {
-      "conceptId": "F071",
-      "conceptTitle": "Tag for a fieldset caption",
-      "category": "HTML Forms",
-      "question": "What tag provides a caption or title for a &lt;fieldset&gt;?",
-      "options": [
-        { "label": "&lt;caption&gt;", "isCorrect": false },
-        { "label": "&lt;legend&gt;", "isCorrect": true },
-        { "label": "&lt;header&gt;", "isCorrect": false },
-        { "label": "&lt;title&gt;", "isCorrect": false }
-      ],
-      "codeExample": "&lt;fieldset&gt;&lt;legend&gt;Personal Info&lt;/legend&gt;...&lt;/fieldset&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The &lt;legend&gt; element is used inside &lt;fieldset&gt; to provide a descriptive title for the group of controls."
-    },
-    {
-      "conceptId": "F072",
-      "conceptTitle": "Attribute for data submitted to the server",
-      "category": "HTML Forms",
-      "question": "Which attribute on an &lt;input&gt; is used to define the name of the data submitted to the server?",
-      "options": [
-        { "label": "id", "isCorrect": false },
-        { "label": "value", "isCorrect": false },
-        { "label": "name", "isCorrect": true },
-        { "label": "label", "isCorrect": false }
+        { "label": "&lt;input type=&quot;text&quot;&gt;", "isCorrect": true },
+        { "label": "&lt;label&gt;", "isCorrect": false }
       ],
       "codeExample": "&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'name' attribute is crucial as it creates the key-value pair ('name'='value') that is sent to the server when the form is submitted."
+      "answerExplanation": "The &lt;input&gt; element, when used with 'type=\"text\"', creates the most common form control for collecting short, plain text."
     },
     {
-      "conceptId": "F073",
-      "conceptTitle": "Purpose of the 'placeholder' attribute",
+      "conceptId": "F046",
+      "conceptTitle": "Element for associating text with an input",
       "category": "HTML Forms",
-      "question": "What is the purpose of the 'placeholder' attribute?",
+      "question": "What element is used to associate a label with a form control (like an input field)?",
       "options": [
-        { "label": "Sets the default value of the input", "isCorrect": false },
-        { "label": "Provides a hint or example value that disappears on focus", "isCorrect": true },
-        { "label": "Defines the label for the input", "isCorrect": false },
-        { "label": "Specifies the required input pattern", "isCorrect": false }
+        { "label": "&lt;span&gt;", "isCorrect": false },
+        { "label": "&lt;label&gt;", "isCorrect": true },
+        { "label": "&lt;p&gt;", "isCorrect": false },
+        { "label": "&lt;legend&gt;", "isCorrect": false }
       ],
-      "codeExample": "&lt;input placeholder=&quot;e.g., john@email.com&quot;&gt;",
+      "codeExample": "&lt;label for=&quot;id_name&quot;&gt;Name:&lt;/label&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'placeholder' provides non-required, temporary guidance to the user about what kind of information is expected in the field."
+      "answerExplanation": "The &lt;label&gt; element improves accessibility by allowing screen readers to announce the label when the associated input is focused, and it allows users to click the label to focus the input."
     },
     {
-      "conceptId": "F074",
-      "conceptTitle": "Preventing editing of an input field value",
+      "conceptId": "F047",
+      "conceptTitle": "Input type for password fields",
       "category": "HTML Forms",
-      "question": "Which attribute is used to prevent the user from editing the value of an input field, while still submitting the value with the form?",
+      "question": "Which 'type' attribute should be used for a password input field?",
       "options": [
-        { "label": "disabled", "isCorrect": false },
-        { "label": "readonly", "isCorrect": true },
-        { "label": "locked", "isCorrect": false },
-        { "label": "static", "isCorrect": false }
+        { "label": "text", "isCorrect": false },
+        { "label": "password", "isCorrect": true },
+        { "label": "secret", "isCorrect": false },
+        { "label": "hide", "isCorrect": false }
       ],
-      "codeExample": "&lt;input value=&quot;Admin&quot; readonly&gt;",
+      "codeExample": "&lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'readonly' attribute allows the value to be seen and submitted, but not modified. A 'disabled' field is not submitted at all."
+      "answerExplanation": "The 'type=\"password\"' ensures that the characters entered by the user are masked (usually with dots or asterisks) for privacy."
     },
     {
-      "conceptId": "F075",
-      "conceptTitle": "Correct input type for date and time picker",
+      "conceptId": "F048",
+      "conceptTitle": "Input type for checkboxes",
       "category": "HTML Forms",
-      "question": "What is the correct &lt;input&gt; type for a date and time picker without a timezone?",
+      "question": "To create a selection where a user can choose zero or more options, you would use which input type?",
       "options": [
-        { "label": "datetime", "isCorrect": false },
-        { "label": "datetime-local", "isCorrect": true },
-        { "label": "date-time", "isCorrect": false },
-        { "label": "time-date", "isCorrect": false }
-      ],
-      "codeExample": "&lt;input type=&quot;datetime-local&quot;&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The 'datetime-local' type displays a field for entering both a date and a time."
-    },
-    {
-      "conceptId": "F076",
-      "conceptTitle": "Attribute to receive focus on page load",
-      "category": "HTML Forms",
-      "question": "Which attribute allows an input field to receive focus immediately when the page loads?",
-      "options": [
-        { "label": "initial-focus", "isCorrect": false },
-        { "label": "autofocus", "isCorrect": true },
-        { "label": "onload-focus", "isCorrect": false },
-        { "label": "focus", "isCorrect": false }
-      ],
-      "codeExample": "&lt;input type=&quot;text&quot; autofocus&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The boolean attribute 'autofocus' sets the cursor inside the field immediately upon the page loading."
-    },
-    {
-      "conceptId": "F077",
-      "conceptTitle": "Effect of 'novalidate' attribute",
-      "category": "HTML Forms",
-      "question": "What does the 'novalidate' attribute do when added to the &lt;form&gt; tag?",
-      "options": [
-        { "label": "Prevents data from being submitted", "isCorrect": false },
-        { "label": "Disables browser's automatic form validation", "isCorrect": true },
-        { "label": "Requires all fields to be submitted empty", "isCorrect": false },
-        { "label": "Sends the data to a non-validated URL", "isCorrect": false }
-      ],
-      "codeExample": "&lt;form novalidate&gt;...&lt;/form&gt;",
-      "visualConcept": "",
-      "answerExplanation": "The 'novalidate' attribute allows you to use JavaScript for custom validation without the browser's built-in validation interfering."
-    },
-    {
-      "conceptId": "F078",
-      "conceptTitle": "Input type for toggle or on/off switch",
-      "category": "HTML Forms",
-      "question": "Which input type is generally used as a base for a toggle or on/off switch control?",
-      "options": [
-        { "label": "range", "isCorrect": false },
+        { "label": "radio", "isCorrect": false },
         { "label": "checkbox", "isCorrect": true },
-        { "label": "toggle", "isCorrect": false },
-        { "label": "radio", "isCorrect": false }
+        { "label": "select", "isCorrect": false },
+        { "label": "toggle", "isCorrect": false }
       ],
-      "codeExample": "&lt;input type=&quot;checkbox&quot;&gt;",
+      "codeExample": "&lt;input type=&quot;checkbox&quot; name=&quot;options&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "A checkbox is a binary control (on/off, true/false) and is typically styled with CSS to look like a modern switch."
+      "answerExplanation": "Checkboxes allow users to select multiple options from a set. To link them, they typically share the same 'name' attribute but have different 'value' attributes."
     },
     {
-      "conceptId": "F079",
-      "conceptTitle": "Purpose of the 'pattern' attribute",
+      "conceptId": "F049",
+      "conceptTitle": "Input type for radio buttons",
       "category": "HTML Forms",
-      "question": "What is the purpose of the 'pattern' attribute on an &lt;input&gt;?",
+      "question": "To create a selection where a user can choose only one option from a set, you would use which input type?",
       "options": [
-        { "label": "Sets the placeholder value", "isCorrect": false },
-        { "label": "Specifies a regular expression for input validation", "isCorrect": true },
-        { "label": "Defines the CSS styles for the input", "isCorrect": false },
-        { "label": "Controls the input's maximum length", "isCorrect": false }
+        { "label": "checkbox", "isCorrect": false },
+        { "label": "radio", "isCorrect": true },
+        { "label": "select", "isCorrect": false },
+        { "label": "option", "isCorrect": false }
       ],
-      "codeExample": "&lt;input pattern=&quot;[0-9]{5}&quot; title=&quot;5 digits&quot;&gt;",
+      "codeExample": "&lt;input type=&quot;radio&quot; name=&quot;color&quot; value=&quot;red&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'pattern' attribute takes a JavaScript regular expression to enforce a specific format (e.g., a phone number, zip code) for the field's value."
+      "answerExplanation": "Radio buttons are grouped by having the same 'name' attribute. Only one button in a group can be selected at a time."
     },
     {
-      "conceptId": "F080",
-      "conceptTitle": "Event handler for custom form validation",
+      "conceptId": "F050",
+      "conceptTitle": "Element for multi-line text input",
       "category": "HTML Forms",
-      "question": "Which event handler is commonly used on the &lt;form&gt; element to perform custom JavaScript validation *before* submission?",
+      "question": "Which element allows a user to input multiple lines of text?",
       "options": [
-        { "label": "onclick", "isCorrect": false },
-        { "label": "onchange", "isCorrect": false },
-        { "label": "onsubmit", "isCorrect": true },
-        { "label": "onvalidate", "isCorrect": false }
+        { "label": "&lt;input type=&quot;text&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;textarea&gt;", "isCorrect": true },
+        { "label": "&lt;input type=&quot;paragraph&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;textbox&gt;", "isCorrect": false }
       ],
-      "codeExample": "&lt;form onsubmit=&quot;return validateForm()&quot;&gt;",
+      "codeExample": "&lt;textarea name=&quot;comment&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'onsubmit' event fires when the form is about to be submitted. Returning 'false' from the handler will prevent the submission."
+      "answerExplanation": "The &lt;textarea&gt; element creates a multi-line input control, commonly used for comments or detailed descriptions."
     },
     {
-      "conceptId": "F081",
-      "conceptTitle": "CSS pseudo-class for a filled input",
-      "category": "CSS Forms",
-      "question": "Which CSS pseudo-class targets an element that has been filled in with a value that passes the browser's validation rules?",
-      "options": [
-        { "label": ":focus", "isCorrect": false },
-        { "label": ":valid", "isCorrect": true },
-        { "label": ":required", "isCorrect": false },
-        { "label": ":filled", "isCorrect": false }
-      ],
-      "codeExample": "input:valid { border-color: green; }",
-      "visualConcept": "",
-      "answerExplanation": "The ':valid' pseudo-class selects form elements whose content is validated to be correct based on attributes like 'required', 'type', and 'pattern'."
-    },
-    {
-      "conceptId": "F082",
-      "conceptTitle": "Element defining a selectable option",
+      "conceptId": "F051",
+      "conceptTitle": "Element for a dropdown list",
       "category": "HTML Forms",
-      "question": "What element defines a selectable option within a &lt;select&gt; list?",
+      "question": "Which element is used to create a dropdown list of options?",
+      "options": [
+        { "label": "&lt;input type=&quot;list&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;select&gt;", "isCorrect": true },
+        { "label": "&lt;list&gt;", "isCorrect": false },
+        { "label": "&lt;options&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;select name=&quot;fruit&quot;&gt;\n  &lt;!-- options go here --&gt;\n&lt;/select&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;select&gt; element is the container for the dropdown, and it holds one or more &lt;option&gt; elements."
+    },
+    {
+      "conceptId": "F052",
+      "conceptTitle": "Element inside a dropdown list",
+      "category": "HTML Forms",
+      "question": "What tag defines an individual option within a dropdown list?",
       "options": [
         { "label": "&lt;item&gt;", "isCorrect": false },
         { "label": "&lt;option&gt;", "isCorrect": true },
-        { "label": "&lt;list-item&gt;", "isCorrect": false },
-        { "label": "&lt;li&gt;", "isCorrect": false }
+        { "label": "&lt;input&gt;", "isCorrect": false },
+        { "label": "&lt;label&gt;", "isCorrect": false }
       ],
-      "codeExample": "&lt;select&gt;&lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;&lt;/select&gt;",
+      "codeExample": "&lt;select&gt;\n  &lt;option value=&quot;apple&quot;&gt;Apple&lt;/option&gt;\n&lt;/select&gt;",
       "visualConcept": "",
-      "answerExplanation": "The &lt;option&gt; tag specifies an item that can be selected in a dropdown list or multi-select box."
+      "answerExplanation": "The &lt;option&gt; element is used within a &lt;select&gt; list to define an available selection."
     },
     {
-      "conceptId": "F083",
-      "conceptTitle": "Input type for color picker",
+      "conceptId": "F053",
+      "conceptTitle": "Input type for form submission",
       "category": "HTML Forms",
-      "question": "Which &lt;input&gt; type is used for a color picker?",
+      "question": "The default input type to create a button that submits the form is:",
       "options": [
-        { "label": "rgb", "isCorrect": false },
-        { "label": "hex", "isCorrect": false },
-        { "label": "color", "isCorrect": true },
-        { "label": "palette", "isCorrect": false }
+        { "label": "type=&quot;button&quot;", "isCorrect": false },
+        { "label": "type=&quot;submit&quot;", "isCorrect": true },
+        { "label": "type=&quot;post&quot;", "isCorrect": false },
+        { "label": "type=&quot;send&quot;", "isCorrect": false }
       ],
-      "codeExample": "&lt;input type=&quot;color&quot; value=&quot;#ff0000&quot;&gt;",
+      "codeExample": "&lt;input type=&quot;submit&quot; value=&quot;Send Data&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'color' type provides the user with a color selection interface (a system-native color picker)."
+      "answerExplanation": "An &lt;input&gt; with 'type=\"submit\"' or a &lt;button&gt; with 'type=\"submit\"' will trigger the form submission when clicked."
     },
     {
-      "conceptId": "F084",
-      "conceptTitle": "Purpose of the 'autocomplete' attribute",
+      "conceptId": "F054",
+      "conceptTitle": "Input type for resetting form data",
       "category": "HTML Forms",
-      "question": "What is the purpose of the 'autocomplete' attribute?",
+      "question": "Which input type creates a button that clears all form data?",
       "options": [
-        { "label": "Defines the required fields", "isCorrect": false },
-        { "label": "Allows the browser to suggest and fill in the field based on previous input", "isCorrect": true },
-        { "label": "Sets the auto-focus property", "isCorrect": false },
-        { "label": "Disables form validation", "isCorrect": false }
+        { "label": "type=&quot;clear&quot;", "isCorrect": false },
+        { "label": "type=&quot;reset&quot;", "isCorrect": true },
+        { "label": "type=&quot;cancel&quot;", "isCorrect": false },
+        { "label": "type=&quot;button&quot;", "isCorrect": false }
       ],
-      "codeExample": "&lt;input autocomplete=&quot;email&quot;&gt;",
+      "codeExample": "&lt;input type=&quot;reset&quot; value=&quot;Clear Form&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'autocomplete' attribute is a hint to the browser's autofill feature, helping it provide relevant suggestions (e.g., 'name', 'email', 'off')."
+      "answerExplanation": "The 'type=\"reset\"' button restores the form fields to their initial, default values."
     },
     {
-      "conceptId": "F085",
-      "conceptTitle": "Tag for a simple reset button",
+      "conceptId": "F055",
+      "conceptTitle": "Grouping related form elements",
       "category": "HTML Forms",
-      "question": "Which tag/type combination is used to create a simple reset button that clears the form data?",
+      "question": "Which element is used to group related elements in a form, often with a border?",
       "options": [
-        { "label": "&lt;input type=&quot;clear&quot;&gt;", "isCorrect": false },
-        { "label": "&lt;button type=&quot;reset&quot;&gt;", "isCorrect": true },
-        { "label": "&lt;input type=&quot;clear-form&quot;&gt;", "isCorrect": false },
-        { "label": "&lt;input type=&quot;button&quot;&gt;", "isCorrect": false }
+        { "label": "&lt;div&gt;", "isCorrect": false },
+        { "label": "&lt;fieldset&gt;", "isCorrect": true },
+        { "label": "&lt;group&gt;", "isCorrect": false },
+        { "label": "&lt;section&gt;", "isCorrect": false }
       ],
-      "codeExample": "&lt;button type=&quot;reset&quot;&gt;Clear&lt;/button&gt;",
+      "codeExample": "&lt;fieldset&gt;\n  &lt;legend&gt;Contact Info&lt;/legend&gt;\n  &lt;!-- inputs --&gt;\n&lt;/fieldset&gt;",
       "visualConcept": "",
-      "answerExplanation": "Setting the button or input type to 'reset' automatically reverts all form controls to their initial values without requiring JavaScript."
+      "answerExplanation": "The &lt;fieldset&gt; element draws a box around a set of form controls and is used for organizational and accessibility purposes."
     },
     {
-      "conceptId": "F086",
-      "conceptTitle": "Purpose of the 'enctype' attribute",
+      "conceptId": "F056",
+      "conceptTitle": "Adding a title to a form group",
       "category": "HTML Forms",
-      "question": "What is the purpose of the 'enctype' attribute on a form?",
+      "question": "Which element provides a title or caption for a set of related form elements inside &lt;fieldset&gt;?",
       "options": [
-        { "label": "Specifies the form's character encoding", "isCorrect": false },
-        { "label": "Defines how the form data should be encoded, especially for file uploads", "isCorrect": true },
-        { "label": "Sets the form's HTTP method", "isCorrect": false },
-        { "label": "Enables form validation", "isCorrect": false }
+        { "label": "&lt;caption&gt;", "isCorrect": false },
+        { "label": "&lt;legend&gt;", "isCorrect": true },
+        { "label": "&lt;label&gt;", "isCorrect": false },
+        { "label": "&lt;title&gt;", "isCorrect": false }
       ],
-      "codeExample": "&lt;form enctype=&quot;multipart/form-data&quot;&gt;...&lt;/form&gt;",
+      "codeExample": "&lt;legend&gt;Personal Details&lt;/legend&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'enctype' (encoding type) attribute is necessary when a form includes a file input, which requires the encoding to be set to 'multipart/form-data'."
+      "answerExplanation": "The &lt;legend&gt; element provides a caption for the contents of its parent &lt;fieldset&gt;."
     },
     {
-      "conceptId": "F087",
-      "conceptTitle": "Input type to upload a file",
+      "conceptId": "F057",
+      "conceptTitle": "Attribute to make an input mandatory",
       "category": "HTML Forms",
-      "question": "Which &lt;input&gt; type is used to allow a user to upload a file?",
+      "question": "Which attribute makes a form input field mandatory (must be filled out) before submission?",
       "options": [
-        { "label": "upload", "isCorrect": false },
-        { "label": "data", "isCorrect": false },
-        { "label": "file", "isCorrect": true },
-        { "label": "blob", "isCorrect": false }
+        { "label": "must-fill", "isCorrect": false },
+        { "label": "required", "isCorrect": true },
+        { "label": "validate", "isCorrect": false },
+        { "label": "mandatory", "isCorrect": false }
       ],
-      "codeExample": "&lt;input type=&quot;file&quot;&gt;",
+      "codeExample": "&lt;input type=&quot;text&quot; required&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'file' type provides a file selection dialog and requires the form's 'method' to be 'POST' and 'enctype' to be 'multipart/form-data'."
+      "answerExplanation": "The boolean 'required' attribute triggers built-in HTML5 validation, preventing form submission if the field is empty and displaying a native browser error message."
     },
     {
-      "conceptId": "F088",
-      "conceptTitle": "Defining min and max for number input",
+      "conceptId": "F058",
+      "conceptTitle": "Attribute for placeholder text in input fields",
       "category": "HTML Forms",
-      "question": "How do you define a minimum and maximum value for a number or range &lt;input&gt;?",
+      "question": "Which attribute specifies a short hint that describes the expected value of an input field?",
       "options": [
-        { "label": "Use the 'low' and 'high' attributes", "isCorrect": false },
-        { "label": "Use the 'min' and 'max' attributes", "isCorrect": true },
-        { "label": "Use the 'range' attribute", "isCorrect": false },
-        { "label": "Use the 'size' and 'limit' attributes", "isCorrect": false }
+        { "label": "value", "isCorrect": false },
+        { "label": "hint", "isCorrect": false },
+        { "label": "placeholder", "isCorrect": true },
+        { "label": "label", "isCorrect": false }
       ],
-      "codeExample": "&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;",
+      "codeExample": "&lt;input type=&quot;text&quot; placeholder=&quot;e.g., John Smith&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The 'min' and 'max' attributes are used to enforce constraints on numeric and date-related input types."
+      "answerExplanation": "The 'placeholder' attribute shows gray text inside an empty input field; it is not a substitute for a visible &lt;label&gt;."
     },
     {
-      "conceptId": "F089",
-      "conceptTitle": "Tag for pre-defined options for a text input",
+      "conceptId": "F059",
+      "conceptTitle": "HTML5 input type for email addresses",
       "category": "HTML Forms",
-      "question": "What HTML tag is used to create a list of pre-defined options for a text &lt;input&gt; that the user can also type into?",
+      "question": "Which HTML5 input type provides automatic validation for email addresses?",
       "options": [
-        { "label": "&lt;select&gt;", "isCorrect": false },
-        { "label": "&lt;datalist&gt;", "isCorrect": true },
-        { "label": "&lt;option-group&gt;", "isCorrect": false },
-        { "label": "&lt;options&gt;", "isCorrect": false }
+        { "label": "text", "isCorrect": false },
+        { "label": "email", "isCorrect": true },
+        { "label": "mail", "isCorrect": false },
+        { "label": "address", "isCorrect": false }
       ],
-      "codeExample": "&lt;input list=&quot;browsers&quot;&gt;&lt;datalist id=&quot;browsers&quot;&gt;...&lt;/datalist&gt;",
+      "codeExample": "&lt;input type=&quot;email&quot; name=&quot;user_email&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The &lt;datalist&gt; element provides a list of options that can be suggested to the user as they type in an associated text &lt;input&gt; (linked by the 'list' attribute)."
+      "answerExplanation": "The 'type=\"email\"' input checks if the entered text roughly resembles an email format (e.g., contains an '@' symbol) and can change the keyboard layout on mobile devices."
     },
     {
-      "conceptId": "F090",
-      "conceptTitle": "Setting the initially selected option",
+      "conceptId": "F060",
+      "conceptTitle": "HTML5 input type for numeric input",
       "category": "HTML Forms",
-      "question": "Which attribute is used to set the initially selected option in a &lt;select&gt; element?",
+      "question": "Which HTML5 input type is used for numeric input, often displaying a spinner control?",
       "options": [
-        { "label": "default", "isCorrect": false },
-        { "label": "selected on the desired &lt;option&gt;", "isCorrect": true },
-        { "label": "checked on the &lt;select&gt;", "isCorrect": false },
-        { "label": "pre-selected", "isCorrect": false }
+        { "label": "text", "isCorrect": false },
+        { "label": "decimal", "isCorrect": false },
+        { "label": "number", "isCorrect": true },
+        { "label": "numeric", "isCorrect": false }
       ],
-      "codeExample": "&lt;option value=&quot;x&quot; selected&gt;Option X&lt;/option&gt;",
+      "codeExample": "&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;100&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "The boolean attribute 'selected' is applied to an individual &lt;option&gt; tag to mark it as the default choice when the page loads."
+      "answerExplanation": "The 'type=\"number\"' input enforces numeric input and allows the use of attributes like 'min', 'max', and 'step' for validation."
     },
     {
-      "conceptId": "R091",
-      "conceptTitle": "Critical viewport meta tag for responsiveness",
+      "conceptId": "F061",
+      "conceptTitle": "Using the 'pattern' attribute for validation",
+      "category": "HTML Forms",
+      "question": "What is the primary function of the 'pattern' attribute on an &lt;input&gt; tag?",
+      "options": [
+        { "label": "Sets the font for the input", "isCorrect": false },
+        { "label": "Defines a regular expression for value validation", "isCorrect": true },
+        { "label": "Specifies a list of acceptable values", "isCorrect": false },
+        { "label": "Applies a background image", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;text&quot; pattern=&quot;[0-9]{5}&quot; title=&quot;Five digits only&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'pattern' attribute takes a regular expression that the browser uses to validate the input value before form submission."
+    },
+    {
+      "conceptId": "F062",
+      "conceptTitle": "The purpose of the 'name' attribute in forms",
+      "category": "HTML Forms",
+      "question": "Why is the 'name' attribute essential for form controls?",
+      "options": [
+        { "label": "It is used for CSS styling", "isCorrect": false },
+        { "label": "It is the key used to identify the data on the server side", "isCorrect": true },
+        { "label": "It provides a visual label for the user", "isCorrect": false },
+        { "label": "It defines the placeholder text", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input name=&quot;user_input&quot; value=&quot;...&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "When a form is submitted, the data is sent as 'name=value' pairs. Without a 'name', the input's value will not be included in the submission data."
+    },
+    {
+      "conceptId": "F063",
+      "conceptTitle": "Creating a file upload input",
+      "category": "HTML Forms",
+      "question": "What is the correct input type for creating a file upload field?",
+      "options": [
+        { "label": "type=&quot;upload&quot;", "isCorrect": false },
+        { "label": "type=&quot;file&quot;", "isCorrect": true },
+        { "label": "type=&quot;data&quot;", "isCorrect": false },
+        { "label": "type=&quot;document&quot;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;file&quot; name=&quot;document&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'type=\"file\"' input allows the user to browse their local file system and select a file to be uploaded with the form."
+    },
+    {
+      "conceptId": "F064",
+      "conceptTitle": "Attribute to accept specific file types",
+      "category": "HTML Forms",
+      "question": "Which attribute restricts the types of files that can be selected in a file input?",
+      "options": [
+        { "label": "file-type", "isCorrect": false },
+        { "label": "accept", "isCorrect": true },
+        { "label": "allowed", "isCorrect": false },
+        { "label": "mime", "isCorrect": false }
+      ],
+      "codeExample": "&lt;input type=&quot;file&quot; accept=&quot;image/*, .pdf&quot;&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The 'accept' attribute takes a comma-separated list of MIME types (e.g., `image/png`) or file extensions (e.g., `.jpg`)."
+    },
+    {
+      "conceptId": "F065",
+      "conceptTitle": "Attribute to pre-select a dropdown option",
+      "category": "HTML Forms",
+      "question": "How do you pre-select a specific option in a &lt;select&gt; dropdown list?",
+      "options": [
+        { "label": "checked attribute on &lt;option&gt;", "isCorrect": false },
+        { "label": "selected attribute on &lt;option&gt;", "isCorrect": true },
+        { "label": "default attribute on &lt;select&gt;", "isCorrect": false },
+        { "label": "value attribute on &lt;select&gt;", "isCorrect": false }
+      ],
+      "codeExample": "&lt;option value=&quot;CA&quot; selected&gt;California&lt;/option&gt;",
+      "visualConcept": "",
+      "answerExplanation": "The boolean 'selected' attribute, when present on an &lt;option&gt; element, causes that option to be the default choice when the page loads."
+    },
+    {
+      "conceptId": "C066",
+      "conceptTitle": "Removing default input borders with CSS",
+      "category": "CSS Forms",
+      "question": "How do you remove the default browser border on an &lt;input&gt; field?",
+      "options": [
+        { "label": "border-style: none", "isCorrect": false },
+        { "label": "border: none", "isCorrect": true },
+        { "label": "outline: none", "isCorrect": false },
+        { "label": "box-shadow: none", "isCorrect": false }
+      ],
+      "codeExample": "input[type=&quot;text&quot;] { border: none; }",
+      "visualConcept": "",
+      "answerExplanation": "Setting 'border: none' (or 'border: 0') removes the physical border outline. Note: You should generally keep the 'outline' for accessibility on focus."
+    },
+    {
+      "conceptId": "C067",
+      "conceptTitle": "Styling the input focus state with CSS",
+      "category": "CSS Forms",
+      "question": "Which CSS pseudo-class is used to style an input field when it has user focus?",
+      "options": [
+        { "label": ":active", "isCorrect": false },
+        { "label": ":hover", "isCorrect": false },
+        { "label": ":focus", "isCorrect": true },
+        { "label": ":checked", "isCorrect": false }
+      ],
+      "codeExample": "input:focus { border-color: blue; box-shadow: 0 0 5px rgba(0,0,255,0.5); }",
+      "visualConcept": "",
+      "answerExplanation": "The ':focus' pseudo-class is essential for accessibility, providing a visual indicator to users when they are interacting with the form control."
+    },
+    {
+      "conceptId": "C068",
+      "conceptTitle": "Styling the placeholder text",
+      "category": "CSS Forms",
+      "question": "Which proprietary pseudo-element is used to style the placeholder text inside an input?",
+      "options": [
+        { "label": "::input-hint", "isCorrect": false },
+        { "label": "::placeholder", "isCorrect": true },
+        { "label": "::text-hint", "isCorrect": false },
+        { "label": "::label", "isCorrect": false }
+      ],
+      "codeExample": "::placeholder { color: #aaa; font-style: italic; }",
+      "visualConcept": "",
+      "answerExplanation": "The `::placeholder` pseudo-element (often requiring vendor prefixes like `-webkit-input-placeholder`) allows developers to change the color and appearance of the placeholder text."
+    },
+    {
+      "conceptId": "C069",
+      "conceptTitle": "Styling a disabled input field",
+      "category": "CSS Forms",
+      "question": "How do you apply specific styles to a form input that is disabled?",
+      "options": [
+        { "label": ":inactive", "isCorrect": false },
+        { "label": ":disabled", "isCorrect": true },
+        { "label": "[disabled=true]", "isCorrect": false },
+        { "label": ":read-only", "isCorrect": false }
+      ],
+      "codeExample": "input:disabled { background-color: #eee; cursor: not-allowed; }",
+      "visualConcept": "",
+      "answerExplanation": "The ':disabled' pseudo-class targets any form element with the 'disabled' attribute, allowing you to visually indicate that the field is non-interactive."
+    },
+    {
+      "conceptId": "C070",
+      "conceptTitle": "Styling a checked checkbox/radio button",
+      "category": "CSS Forms",
+      "question": "Which pseudo-class is used to style a radio button or checkbox that is currently selected?",
+      "options": [
+        { "label": ":selected", "isCorrect": false },
+        { "label": ":on", "isCorrect": false },
+        { "label": ":checked", "isCorrect": true },
+        { "label": ":active", "isCorrect": false }
+      ],
+      "codeExample": "input[type='checkbox']:checked + label { font-weight: bold; }",
+      "visualConcept": "",
+      "answerExplanation": "The ':checked' pseudo-class is critical for applying custom styles (often using the adjacent sibling selector '+' or general sibling selector '~') to elements near the checked input."
+    },
+    {
+      "conceptId": "C071",
+      "conceptTitle": "Styling valid/invalid form fields with CSS",
+      "category": "CSS Forms",
+      "question": "What pseudo-classes are used to style a form field based on its validation status?",
+      "options": [
+        { "label": ":correct / :wrong", "isCorrect": false },
+        { "label": ":valid / :invalid", "isCorrect": true },
+        { "label": ":filled / :empty", "isCorrect": false },
+        { "label": ":required / :optional", "isCorrect": false }
+      ],
+      "codeExample": "input:invalid { border: 2px solid red; }",
+      "visualConcept": "",
+      "answerExplanation": "The ':valid' and ':invalid' pseudo-classes let you provide real-time visual feedback to the user as they type, based on HTML5 validation rules (like 'required', 'type', or 'pattern')."
+    },
+    {
+      "conceptId": "C072",
+      "conceptTitle": "Hiding the default appearance of a radio button",
+      "category": "CSS Forms",
+      "question": "How do you hide the default browser appearance of a radio button to apply custom styling?",
+      "options": [
+        { "label": "display: none", "isCorrect": false },
+        { "label": "opacity: 0", "isCorrect": false },
+        { "label": "appearance: none", "isCorrect": true },
+        { "label": "visibility: hidden", "isCorrect": false }
+      ],
+      "codeExample": "input[type='radio'] { appearance: none; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'appearance: none' property is the intended CSS method to remove the native styling of form elements, allowing for custom design via border, background, etc."
+    },
+    {
+      "conceptId": "C073",
+      "conceptTitle": "Making a form input stretch full width",
+      "category": "CSS Forms",
+      "question": "How do you make an &lt;input&gt; element stretch to the full width of its container?",
+      "options": [
+        { "label": "width: 100%", "isCorrect": true },
+        { "label": "display: block", "isCorrect": false },
+        { "label": "max-width: 100%", "isCorrect": false },
+        { "label": "box-sizing: border-box", "isCorrect": false }
+      ],
+      "codeExample": "input[type='text'] { width: 100%; box-sizing: border-box; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'width: 100%' property, when combined with 'box-sizing: border-box' (which ensures padding/border don't exceed 100% width), makes the input fill the available horizontal space."
+    },
+    {
+      "conceptId": "C074",
+      "conceptTitle": "Centering a &lt;form&gt; element horizontally",
+      "category": "CSS Forms",
+      "question": "How do you center an entire &lt;form&gt; element horizontally on the page?",
+      "options": [
+        { "label": "text-align: center", "isCorrect": false },
+        { "label": "margin: 0 auto", "isCorrect": true },
+        { "label": "align-items: center", "isCorrect": false },
+        { "label": "position: center", "isCorrect": false }
+      ],
+      "codeExample": "form { width: 400px; margin: 0 auto; }",
+      "visualConcept": "",
+      "answerExplanation": "Since the &lt;form&gt; element is a block-level element, setting a fixed 'width' and then using 'margin: 0 auto' will center it within its parent container."
+    },
+    {
+      "conceptId": "C075",
+      "conceptTitle": "Styling a &lt;fieldset&gt; border",
+      "category": "CSS Forms",
+      "question": "Which element do you target in CSS to style the border surrounding a form group?",
+      "options": [
+        { "label": "fieldset", "isCorrect": true },
+        { "label": "legend", "isCorrect": false },
+        { "label": "form-group", "isCorrect": false },
+        { "label": "input-group", "isCorrect": false }
+      ],
+      "codeExample": "fieldset { border: 1px solid #ccc; border-radius: 5px; }",
+      "visualConcept": "",
+      "answerExplanation": "The &lt;fieldset&gt; element is the container that draws the default border, and it is styled using standard CSS border properties."
+    },
+    {
+      "conceptId": "C076",
+      "conceptTitle": "Customizing the &lt;legend&gt; position",
+      "category": "CSS Forms",
+      "question": "Which CSS property is often used on &lt;legend&gt; to control its vertical position relative to the &lt;fieldset&gt; border?",
+      "options": [
+        { "label": "margin-top", "isCorrect": false },
+        { "label": "top", "isCorrect": false },
+        { "label": "vertical-align", "isCorrect": false },
+        { "label": "transform: translateY()", "isCorrect": true }
+      ],
+      "codeExample": "legend { position: relative; transform: translateY(50%); }",
+      "visualConcept": "",
+      "answerExplanation": "While &lt;legend&gt; has unique positioning, advanced styling often involves setting 'position: relative' and using 'transform: translateY()' or manipulating 'margin/padding' to place it precisely over the border."
+    },
+    {
+      "conceptId": "C077",
+      "conceptTitle": "CSS property to align labels and inputs",
+      "category": "CSS Forms",
+      "question": "What layout technique is best for aligning labels and input fields in a neat, two-column structure?",
+      "options": [
+        { "label": "float", "isCorrect": false },
+        { "label": "Flexbox or Grid", "isCorrect": true },
+        { "label": "display: inline-block", "isCorrect": false },
+        { "label": "position: absolute", "isCorrect": false }
+      ],
+      "codeExample": ".form-row { display: flex; align-items: center; }",
+      "visualConcept": "",
+      "answerExplanation": "Modern CSS layouts like Flexbox or Grid offer the best control for vertically centering and horizontally distributing form elements like labels and inputs."
+    },
+    {
+      "conceptId": "C078",
+      "conceptTitle": "Styling the up/down arrows in 'number' inputs",
+      "category": "CSS Forms",
+      "question": "How do you target and remove the spinner arrows on an &lt;input type='number'&gt; in CSS?",
+      "options": [
+        { "label": "::number-controls", "isCorrect": false },
+        { "label": "Use proprietary pseudo-elements (e.g., ::-webkit-inner-spin-button)", "isCorrect": true },
+        { "label": "appearance: none on the input", "isCorrect": false },
+        { "label": "overflow: hidden on the input", "isCorrect": false }
+      ],
+      "codeExample": "input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }",
+      "visualConcept": "",
+      "answerExplanation": "The spinner buttons are controlled by browser-specific pseudo-elements (like `::-webkit-inner-spin-button` for Chrome/Safari) which must be targeted to remove or style them."
+    },
+    {
+      "conceptId": "C079",
+      "conceptTitle": "Ensuring accessible input focus styling",
+      "category": "CSS Forms",
+      "question": "What is a critical accessibility consideration when styling the input's ':focus' state?",
+      "options": [
+        { "label": "Making the border color match the background", "isCorrect": false },
+        { "label": "Removing the 'outline' property", "isCorrect": false },
+        { "label": "Ensuring a high-contrast visual indicator remains", "isCorrect": true },
+        { "label": "Using only background color changes", "isCorrect": false }
+      ],
+      "codeExample": "input:focus { outline: 2px solid blue; }",
+      "visualConcept": "",
+      "answerExplanation": "The focus indicator is crucial for keyboard navigation. While you can remove the default 'outline', you must replace it with a high-contrast visual change (like a custom 'outline', 'box-shadow', or thick border) to meet WCAG guidelines."
+    },
+    {
+      "conceptId": "C080",
+      "conceptTitle": "CSS property to control &lt;textarea&gt; resizing",
+      "category": "CSS Forms",
+      "question": "Which CSS property controls whether a user can resize a &lt;textarea&gt; element?",
+      "options": [
+        { "label": "overflow", "isCorrect": false },
+        { "label": "resize", "isCorrect": true },
+        { "label": "size", "isCorrect": false },
+        { "label": "allow-resize", "isCorrect": false }
+      ],
+      "codeExample": "textarea { resize: vertical; }",
+      "visualConcept": "",
+      "answerExplanation": "The 'resize' property can be set to 'none' (to disable resizing), 'both', 'horizontal', or 'vertical', controlling the axes a user can manually drag to change the size."
+    },
+    {
+      "conceptId": "R081",
+      "conceptTitle": "The purpose of the viewport meta tag",
       "category": "Responsive Design",
-      "question": "What is the critical &lt;meta&gt; tag required for modern responsive design?",
+      "question": "What is the critical meta tag for enabling responsive design on mobile devices?",
       "options": [
         { "label": "&lt;meta name=&quot;responsive&quot;&gt;", "isCorrect": false },
         { "label": "&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;", "isCorrect": true },
-        { "label": "&lt;meta name=&quot;device-scale&quot; content=&quot;1&quot;&gt;", "isCorrect": false },
-        { "label": "&lt;meta name=&quot;screen-size&quot;&gt;", "isCorrect": false }
+        { "label": "&lt;meta name=&quot;screen-size&quot;&gt;", "isCorrect": false },
+        { "label": "&lt;meta name=&quot;mobile-optimized&quot;&gt;", "isCorrect": false }
       ],
       "codeExample": "&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;",
       "visualConcept": "",
-      "answerExplanation": "This tag tells the browser to set the viewport width to the device's screen width and sets the initial zoom level to 1, ensuring elements scale correctly."
+      "answerExplanation": "This tag instructs the browser to set the viewport width equal to the device's width and to set the initial zoom level to 1.0, preventing the browser from zooming out to display the desktop version."
     },
     {
-      "conceptId": "R092",
-      "conceptTitle": "CSS technique for one-dimensional automatic layout",
+      "conceptId": "R082",
+      "conceptTitle": "Core component of Mobile-First design",
       "category": "Responsive Design",
-      "question": "Which CSS technique allows elements to align and distribute space automatically in one dimension (row or column)?",
+      "question": "What is the core principle of a Mobile-First responsive design strategy?",
       "options": [
-        { "label": "Grid (&lt;display: grid&gt;)", "isCorrect": false },
-        { "label": "Flexbox (&lt;display: flex&gt;)", "isCorrect": true },
-        { "label": "Multi-column layout", "isCorrect": false },
-        { "label": "Positioning", "isCorrect": false }
+        { "label": "Design for desktop, then scale down", "isCorrect": false },
+        { "label": "Design for the smallest screen, then use media queries to enhance for larger screens", "isCorrect": true },
+        { "label": "Only support mobile browsers", "isCorrect": false },
+        { "label": "Use only relative units", "isCorrect": false }
       ],
-      "codeExample": "div { display: flex; justify-content: space-between; }",
+      "codeExample": "/* Base styles (mobile first) */\nbody { font-size: 16px; }\n\n/* Desktop enhancement */\n@media (min-width: 768px) { \n  body { font-size: 18px; }\n}",
       "visualConcept": "",
-      "answerExplanation": "Flexbox is designed for one-dimensional content layout, providing powerful tools for alignment and space distribution along a single axis."
+      "answerExplanation": "Mobile-First means writing the default CSS for mobile (small screens) and using `min-width` media queries to add styles for progressively larger screen sizes."
     },
     {
-      "conceptId": "R093",
-      "conceptTitle": "CSS property for two-dimensional layout",
+      "conceptId": "R083",
+      "conceptTitle": "CSS rule for applying styles based on screen width",
       "category": "Responsive Design",
-      "question": "What CSS property is used to define the layout of columns and rows in a two-dimensional grid?",
+      "question": "What is the CSS rule used to apply styles only when a certain screen width or condition is met?",
       "options": [
-        { "label": "display: flex", "isCorrect": false },
-        { "label": "display: grid", "isCorrect": true },
-        { "label": "display: table", "isCorrect": false },
-        { "label": "display: two-d", "isCorrect": false }
+        { "label": "@breakpoint", "isCorrect": false },
+        { "label": "@media", "isCorrect": true },
+        { "label": "@screen-rule", "isCorrect": false },
+        { "label": "max-width: media", "isCorrect": false }
       ],
-      "codeExample": "div { display: grid; grid-template-columns: 1fr 1fr; }",
+      "codeExample": "@media (max-width: 600px) { /* styles here */ }",
       "visualConcept": "",
-      "answerExplanation": "CSS Grid Layout allows you to define complex two-dimensional structures of rows and columns, making it ideal for overall page structure."
+      "answerExplanation": "The `@media` rule (often called a media query) is the fundamental tool for responsive design, allowing conditional styling based on media features like screen size."
     },
     {
-      "conceptId": "R094",
-      "conceptTitle": "CSS unit that scales relative to the root element's font",
+      "conceptId": "R084",
+      "conceptTitle": "Media query for large screens (Mobile-First)",
       "category": "Responsive Design",
-      "question": "Which CSS unit scales relative to the font size of the root &lt;html&gt; element, aiding consistency and accessibility?",
+      "question": "In a Mobile-First approach, which media query condition targets screens larger than 768px?",
       "options": [
-        { "label": "px", "isCorrect": false },
-        { "label": "em", "isCorrect": false },
-        { "label": "rem", "isCorrect": true },
-        { "label": "vw", "isCorrect": false }
+        { "label": "max-width: 768px", "isCorrect": false },
+        { "label": "min-width: 768px", "isCorrect": true },
+        { "label": "screen-width: 768px", "isCorrect": false },
+        { "label": "width > 768px", "isCorrect": false }
       ],
-      "codeExample": "h1 { font-size: 2.5rem; }",
+      "codeExample": "@media (min-width: 768px) { .col { width: 50%; } }",
       "visualConcept": "",
-      "answerExplanation": "The 'rem' (root em) unit is preferred in responsive design because it simplifies scaling across the entire page based on a single root setting."
+      "answerExplanation": "The `min-width` condition means 'apply these styles *only if* the viewport is at least this wide or wider.' This builds styles upward from the mobile base."
     },
     {
-      "conceptId": "R095",
-      "conceptTitle": "Primary purpose of a CSS @media query",
+      "conceptId": "R085",
+      "conceptTitle": "Media query for small screens (Desktop-First)",
       "category": "Responsive Design",
-      "question": "What is the primary purpose of a CSS @media query?",
+      "question": "In a Desktop-First approach, which media query condition targets screens smaller than 600px?",
       "options": [
-        { "label": "To define custom variables", "isCorrect": false },
-        { "label": "To apply different styles based on device characteristics (e.g., screen width)", "isCorrect": true },
-        { "label": "To create animations", "isCorrect": false },
-        { "label": "To import external stylesheets", "isCorrect": false }
+        { "label": "min-width: 600px", "isCorrect": false },
+        { "label": "max-width: 600px", "isCorrect": true },
+        { "label": "width < 600px", "isCorrect": false },
+        { "label": "screen: 600px", "isCorrect": false }
       ],
-      "codeExample": "@media (max-width: 600px) { ... }",
+      "codeExample": "@media (max-width: 600px) { .col { float: none; width: 100%; } }",
       "visualConcept": "",
-      "answerExplanation": "Media queries are the foundation of responsive design, allowing you to create 'breakpoints' where the layout changes to accommodate different screen sizes."
+      "answerExplanation": "The `max-width` condition means 'apply these styles *only if* the viewport is this wide or smaller.' This is used to override desktop styles for smaller screens."
     },
     {
-      "conceptId": "R096",
-      "conceptTitle": "Targeting devices with 768px screen width or less",
+      "conceptId": "R086",
+      "conceptTitle": "Handling very wide tables responsively",
       "category": "Responsive Design",
-      "question": "How do you target devices with a screen width of 768px or less using a media query?",
+      "question": "What is the recommended technique for handling very wide tables that exceed the screen width on mobile?",
       "options": [
-        { "label": "@media (min-width: 768px) { ... }", "isCorrect": false },
-        { "label": "@media (max-width: 768px) { ... }", "isCorrect": true },
-        { "label": "@media (screen-width: 768px) { ... }", "isCorrect": false },
-        { "label": "@media screen and (768px) { ... }", "isCorrect": false }
+        { "label": "Apply font-size: smaller to the table", "isCorrect": false },
+        { "label": "Wrap the table in a &lt;div&gt; with 'overflow-x: auto'", "isCorrect": true },
+        { "label": "Use Flexbox on the &lt;table&gt;", "isCorrect": false },
+        { "label": "Remove half the columns", "isCorrect": false }
       ],
-      "codeExample": "@media (max-width: 768px) { body { padding: 5px; } }",
+      "codeExample": "&lt;div style=&quot;overflow-x: auto;&quot;&gt;&lt;table&gt;...&lt;/table&gt;&lt;/div&gt;",
       "visualConcept": "",
-      "answerExplanation": "'max-width' specifies that the styles inside the block should apply only when the viewport width is equal to or less than the specified value."
+      "answerExplanation": "Wrapping the table in a container with `overflow-x: auto` allows the table to maintain its full width but introduces a horizontal scroll bar only for that container on small screens."
     },
     {
-      "conceptId": "R097",
-      "conceptTitle": "CSS to ensure images scale down without exceeding original size",
+      "conceptId": "R087",
+      "conceptTitle": "CSS unit for flexible image scaling",
       "category": "Responsive Design",
-      "question": "What CSS property combination ensures an &lt;img&gt; scales down within its container but doesn't exceed its original size?",
+      "question": "Which CSS property is crucial for making images scale down responsively?",
       "options": [
-        { "label": "width: 100%; height: auto;", "isCorrect": false },
-        { "label": "max-width: 100%; height: auto;", "isCorrect": true },
-        { "label": "img-scale: 100%;", "isCorrect": false },
-        { "label": "overflow: hidden;", "isCorrect": false }
+        { "label": "height: auto", "isCorrect": false },
+        { "label": "max-width: 100%", "isCorrect": true },
+        { "label": "width: auto", "isCorrect": false },
+        { "label": "image-scale: fluid", "isCorrect": false }
       ],
       "codeExample": "img { max-width: 100%; height: auto; }",
       "visualConcept": "",
-      "answerExplanation": "'max-width: 100%' prevents the image from ever being wider than its container, while 'height: auto' ensures the aspect ratio is maintained as the width changes."
+      "answerExplanation": "Setting `max-width: 100%` ensures the image will shrink to fit its container if the container is smaller than the image's intrinsic size, but it will never grow larger than its original size."
+    },
+    {
+      "conceptId": "R088",
+      "conceptTitle": "Fluid layout units for text sizing",
+      "category": "Responsive Design",
+      "question": "Which relative units are best for creating fluid typography that adapts based on the viewport size?",
+      "options": [
+        { "label": "px and pt", "isCorrect": false },
+        { "label": "em and rem", "isCorrect": true },
+        { "label": "vw and vh", "isCorrect": false },
+        { "label": "cm and mm", "isCorrect": false }
+      ],
+      "codeExample": "h1 { font-size: 2rem; }\n/* Using 'rem' for text, which scales relative to the root font size */",
+      "visualConcept": "",
+      "answerExplanation": "Relative units like `em` (relative to parent element font size) and `rem` (relative to root element font size) allow text to scale naturally with user preferences and element context."
+    },
+    {
+      "conceptId": "R089",
+      "conceptTitle": "Media feature for device orientation",
+      "category": "Media Queries",
+      "question": "Which media feature is used to apply styles based on whether the device is in portrait or landscape mode?",
+      "options": [
+        { "label": "screen-mode", "isCorrect": false },
+        { "label": "orientation", "isCorrect": true },
+        { "label": "aspect-ratio", "isCorrect": false },
+        { "label": "device-mode", "isCorrect": false }
+      ],
+      "codeExample": "@media (orientation: landscape) { .header { height: 50px; } }",
+      "visualConcept": "",
+      "answerExplanation": "The `orientation` media feature can check if the viewport height is greater than the width (`portrait`) or if the width is greater than the height (`landscape`)."
+    },
+    {
+      "conceptId": "R090",
+      "conceptTitle": "Combining media query conditions",
+      "category": "Media Queries",
+      "question": "How do you combine multiple conditions (e.g., minimum width AND maximum width) in a single media query?",
+      "options": [
+        { "label": "using a comma (,)", "isCorrect": false },
+        { "label": "using the 'and' keyword", "isCorrect": true },
+        { "label": "using a plus sign (+)", "isCorrect": false },
+        { "label": "using a colon (:)", "isCorrect": false }
+      ],
+      "codeExample": "@media (min-width: 700px) and (max-width: 1000px) { /* styles here */ }",
+      "visualConcept": "",
+      "answerExplanation": "The `and` keyword is a logical operator that requires both media feature conditions to be true before the enclosed styles are applied."
+    },
+    {
+      "conceptId": "R091",
+      "conceptTitle": "Viewport units for flexible sizing",
+      "category": "Responsive Design",
+      "question": "Which CSS unit is calculated as 1% of the viewport width?",
+      "options": [
+        { "label": "em", "isCorrect": false },
+        { "label": "rem", "isCorrect": false },
+        { "label": "vw", "isCorrect": true },
+        { "label": "vh", "isCorrect": false }
+      ],
+      "codeExample": "h1 { font-size: 5vw; } /* Scales with viewport width */",
+      "visualConcept": "",
+      "answerExplanation": "The `vw` (viewport width) unit is useful for elements, like main headings, that need to scale proportionally with the screen size."
+    },
+    {
+      "conceptId": "R092",
+      "conceptTitle": "Media query for high-resolution screens",
+      "category": "Media Queries",
+      "question": "Which media feature is used to target high-resolution screens (like Retina displays)?",
+      "options": [
+        { "label": "resolution", "isCorrect": true },
+        { "label": "device-pixel-ratio", "isCorrect": false },
+        { "label": "high-res", "isCorrect": false },
+        { "label": "pixel-density", "isCorrect": false }
+      ],
+      "codeExample": "@media (min-resolution: 2dppx) { /* high-res images */ }",
+      "visualConcept": "",
+      "answerExplanation": "The `resolution` media feature (used with units like `dpi` or `dppx`) allows you to serve higher quality images or detailed graphics only to devices that can display them effectively."
+    },
+    {
+      "conceptId": "R093",
+      "conceptTitle": "Best practice for breakpoint units",
+      "category": "Responsive Design",
+      "question": "What is the recommended unit for defining breakpoint values (min-width/max-width)?",
+      "options": [
+        { "label": "px", "isCorrect": false },
+        { "label": "em or rem", "isCorrect": true },
+        { "label": "vw", "isCorrect": false },
+        { "label": "percent (%)", "isCorrect": false }
+      ],
+      "codeExample": "@media (min-width: 40em) { /* 40em = 640px if base font is 16px */ }",
+      "visualConcept": "",
+      "answerExplanation": "Using `em` or `rem` for breakpoints ensures that the layout also adjusts relative to the user's text size preferences, leading to a more accessible and resilient design."
+    },
+    {
+      "conceptId": "R094",
+      "conceptTitle": "CSS property to prevent text wrapping on a single line",
+      "category": "Responsive Design",
+      "question": "What CSS property can be used to prevent a line of text (like a form label) from wrapping?",
+      "options": [
+        { "label": "overflow: hidden", "isCorrect": false },
+        { "label": "white-space: nowrap", "isCorrect": true },
+        { "label": "text-wrap: none", "isCorrect": false },
+        { "label": "word-break: break-all", "isCorrect": false }
+      ],
+      "codeExample": "label { white-space: nowrap; }",
+      "visualConcept": "",
+      "answerExplanation": "The `white-space: nowrap` property prevents text from wrapping onto a new line. This is useful for short, critical content that must stay together, but it can cause overflow issues if not managed."
+    },
+    {
+      "conceptId": "R095",
+      "conceptTitle": "Hiding elements at specific breakpoints",
+      "category": "Responsive Design",
+      "question": "How do you hide a large navigation menu when the screen width is less than 600px?",
+      "options": [
+        { "label": "display: none in a min-width query", "isCorrect": false },
+        { "label": "display: none in a max-width query", "isCorrect": true },
+        { "label": "visibility: hidden in a min-width query", "isCorrect": false },
+        { "label": "overflow: hidden on the container", "isCorrect": false }
+      ],
+      "codeExample": "@media (max-width: 599px) { .desktop-menu { display: none; } }",
+      "visualConcept": "",
+      "answerExplanation": "Using a `max-width` media query with `display: none` is the standard way to remove an element (like a complex menu) entirely from the small-screen layout, usually replacing it with a mobile-friendly alternative (like a hamburger menu)."
+    },
+    {
+      "conceptId": "R096",
+      "conceptTitle": "Fluid Grids: key CSS properties",
+      "category": "Responsive Design",
+      "question": "The key principle of a Fluid Grid layout is using which CSS unit for column widths?",
+      "options": [
+        { "label": "px", "isCorrect": false },
+        { "label": "em", "isCorrect": false },
+        { "label": "percentage (%)", "isCorrect": true },
+        { "label": "vw", "isCorrect": false }
+      ],
+      "codeExample": ".column { float: left; width: 33.33%; }",
+      "visualConcept": "",
+      "answerExplanation": "Fluid grids ensure layout columns stretch and shrink proportionally with the screen size by defining all column widths using percentages, not fixed pixel values."
+    },
+    {
+      "conceptId": "R097",
+      "conceptTitle": "Handling floating elements on mobile",
+      "category": "Responsive Design",
+      "question": "What is the common responsive fix for layout columns that use 'float: left' on desktop?",
+      "options": [
+        { "label": "Change 'float' to 'right'", "isCorrect": false },
+        { "label": "Use a max-width media query to set 'float: none' and 'width: 100%'", "isCorrect": true },
+        { "label": "Add 'padding: 0'", "isCorrect": false },
+        { "label": "Use 'display: inline'", "isCorrect": false }
+      ],
+      "codeExample": "@media (max-width: 700px) { \n  .column { float: none; width: 100%; }\n}",
+      "visualConcept": "",
+      "answerExplanation": "On mobile, floating columns are usually stacked vertically. This is achieved by overriding the `float: left` and `width: percentage` with `float: none` and `width: 100%` inside a media query."
     },
     {
       "conceptId": "R098",
-      "conceptTitle": "Flexbox property for main axis alignment",
+      "conceptTitle": "The benefit of using &lt;picture&gt; element",
       "category": "Responsive Design",
-      "question": "Which Flexbox property controls the alignment of items along the main axis?",
+      "question": "What is the primary benefit of using the HTML &lt;picture&gt; element?",
       "options": [
-        { "label": "align-items", "isCorrect": false },
-        { "label": "justify-content", "isCorrect": true },
-        { "label": "align-content", "isCorrect": false },
-        { "label": "flex-align", "isCorrect": false }
+        { "label": "Allows image optimization for SEO", "isCorrect": false },
+        { "label": "Serves different image files based on screen size or resolution (art direction)", "isCorrect": true },
+        { "label": "Pre-loads all image sizes simultaneously", "isCorrect": false },
+        { "label": "Adds a caption to an image", "isCorrect": false }
       ],
-      "codeExample": "div { display: flex; justify-content: center; }",
+      "codeExample": "&lt;picture&gt;\n  &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;large.jpg&quot;&gt;\n  &lt;img src=&quot;small.jpg&quot;&gt;\n&lt;/picture&gt;",
       "visualConcept": "",
-      "answerExplanation": "'justify-content' manages the spacing and alignment of items along the direction defined by 'flex-direction'."
+      "answerExplanation": "The &lt;picture&gt; element, along with the &lt;source&gt; tag, implements 'art direction,' allowing the browser to choose which image file to load based on media queries (like screen width or pixel density)."
     },
     {
       "conceptId": "R099",
-      "conceptTitle": "Definition of 'Mobile First' in responsive design",
+      "conceptTitle": "Accessible alternative for hiding content",
       "category": "Responsive Design",
-      "question": "What does the term 'Mobile First' mean in responsive design?",
+      "question": "What is the most accessible way to visually hide content but keep it available for screen readers?",
       "options": [
-        { "label": "Using only phone-specific features", "isCorrect": false },
-        { "label": "Designing for the smallest screen size first, then progressively enhancing for larger screens", "isCorrect": true },
-        { "label": "Only using CSS for mobile views", "isCorrect": false },
-        { "label": "Designing the desktop view first and shrinking it down", "isCorrect": false }
+        { "label": "display: none", "isCorrect": false },
+        { "label": "visibility: hidden", "isCorrect": false },
+        { "label": "A specific 'visually-hidden' CSS class", "isCorrect": true },
+        { "label": "text-indent: -9999px", "isCorrect": false }
       ],
-      "codeExample": "/* CSS starts with no media query, then uses @media (min-width: X) */",
+      "codeExample": ".visually-hidden { position: absolute; clip: rect(1px, 1px, 1px, 1px); }",
       "visualConcept": "",
-      "answerExplanation": "Mobile First is a strategy where you design the core layout and styles for mobile devices first, then use 'min-width' media queries to add more complex features for larger devices."
+      "answerExplanation": "A dedicated 'visually-hidden' class uses CSS properties like 'position: absolute' and 'clip' to move the element off-screen while ensuring it is still fully available and readable by assistive technologies."
     },
     {
       "conceptId": "R100",
-      "conceptTitle": "CSS properties for media query screen size range",
+      "conceptTitle": "Primary benefit of Responsive Web Design",
       "category": "Responsive Design",
-      "question": "Which CSS properties are used to define the minimum and maximum screen size for a media query?",
+      "question": "What is the primary benefit of implementing Responsive Web Design?",
       "options": [
-        { "label": "min-size and max-size", "isCorrect": false },
-        { "label": "min-width and max-width", "isCorrect": true },
-        { "label": "min-screen and max-screen", "isCorrect": false },
-        { "label": "width-min and width-max", "isCorrect": false }
+        { "label": "Faster server load times", "isCorrect": false },
+        { "label": "Eliminates the need for JavaScript", "isCorrect": false },
+        { "label": "Provides a single codebase that works well across all devices and screen sizes", "isCorrect": true },
+        { "label": "Forces users to use the latest browsers", "isCorrect": false }
       ],
-      "codeExample": "@media (min-width: 768px) and (max-width: 1024px) { ... }",
+      "codeExample": "/* No specific code, but the overarching philosophy */",
       "visualConcept": "",
-      "answerExplanation": "These two properties allow you to target a specific range of device widths, creating a dedicated 'breakpoint' for tablets or small desktops."
+      "answerExplanation": "RWD ensures a consistent, optimal viewing experience (readability and navigation) with minimum resizing and scrolling, regardless of the user's device (desktop, tablet, or phone)."
     }
   ]
 }
